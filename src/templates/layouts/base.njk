@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  {% include "partials/head.njk" %}
+</head>
+<body>
+  <div class="page-shell" id="top">
+    {% include "partials/header.njk" %}
+
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+
+    {% include "partials/footer.njk" %}
+  </div>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

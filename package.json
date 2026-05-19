@@ -1,0 +1,30 @@
+{
+  "name": "cms-landing-gulp",
+  "version": "1.1.0",
+  "description": "Gulp + BrowserSync + SCSS + Nunjucks landing starter with CMS-friendly block layout",
+  "private": true,
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build",
+    "clean": "gulp clean",
+    "serve": "gulp serve"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "> 0.5%",
+    "not dead"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "browser-sync": "^3.0.3",
+    "gulp": "^5.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-nunjucks-render": "^2.2.3",
+    "gulp-postcss": "^10.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^6.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.83.0"
+  }
+}

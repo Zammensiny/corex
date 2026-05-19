@@ -1,0 +1,81 @@
+.ecosystem {
+  min-height: 720px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.ecosystem__inner {
+  position: relative;
+  display: grid;
+  min-height: 560px;
+  place-items: center;
+}
+
+.ecosystem__head {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.orbit {
+  position: absolute;
+  inset: 0;
+}
+
+.orbit::before {
+  content: "";
+  position: absolute;
+  inset: 8%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+}
+
+.orbit__line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(130, 184, 255, 0.58), transparent);
+  transform-origin: center;
+}
+
+.orbit__line--a {
+  transform: translate(-50%, -50%) rotate(-32deg);
+}
+
+.orbit__line--b {
+  transform: translate(-50%, -50%) rotate(24deg);
+}
+
+.orbit__point {
+  position: absolute;
+  display: grid;
+  width: 66px;
+  height: 66px;
+  place-items: center;
+  border-radius: 50%;
+  color: white;
+  background: rgba(143, 195, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  font-size: 13px;
+  font-weight: 800;
+  backdrop-filter: blur(14px);
+}
+
+.orbit__point--top { top: 10%; left: 58%; }
+.orbit__point--left { top: 30%; left: 12%; }
+.orbit__point--right { top: 36%; right: 8%; }
+.orbit__point--bottom { bottom: 8%; left: 42%; }
+
+@media (max-width: 700px) {
+  .ecosystem {
+    min-height: 620px;
+  }
+
+  .orbit__point {
+    width: 54px;
+    height: 54px;
+  }
+}

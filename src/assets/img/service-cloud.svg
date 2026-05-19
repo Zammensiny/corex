@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 520" fill="none">
+  <rect width="720" height="520" rx="44" fill="#F1F4F1"/>
+  <ellipse cx="430" cy="320" rx="210" ry="70" fill="#DCE3DA"/>
+  <rect x="245" y="165" width="220" height="150" rx="28" transform="rotate(5 245 165)" fill="#E79B79"/>
+  <rect x="350" y="240" width="260" height="150" rx="28" transform="rotate(-6 350 240)" fill="#A7ACA0"/>
+  <text x="300" y="250" font-family="Arial, sans-serif" font-size="58" font-weight="700" fill="#7A3D2F">API</text>
+</svg>

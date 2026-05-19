@@ -1,0 +1,24 @@
+:root {
+  --font-main: "Muller", Arial, Helvetica, sans-serif;
+  --font-heading: "Navigo", Arial, Helvetica, sans-serif;
+
+  --color-page: #aeb0b0;
+  --color-dark-1: #1c2124;
+  --color-dark-2: #34373d;
+  --color-dark-3: #3e4c54;
+  --color-white: #ffffff;
+  --color-soft-white: rgba(255, 255, 255, 0.82);
+  --color-muted: rgba(255, 255, 255, 0.62);
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-accent: #347be9;
+  --color-red: #e94b35;
+  --color-panel: rgba(255, 255, 255, 0.12);
+  --color-code: #55747e;
+
+  --radius-pill: 999px;
+  --radius-card: 18px;
+  --radius-small: 12px;
+  --shadow-card: 0 24px 70px rgba(0, 0, 0, 0.22);
+  --container: 1066px;
+  --gutter: clamp(20px, 4vw, 40px);
+}

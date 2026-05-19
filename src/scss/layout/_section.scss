@@ -1,0 +1,52 @@
+.section {
+  position: relative;
+  padding-block: var(--section-y);
+}
+
+.section--dark {
+  color: white;
+  background: linear-gradient(180deg, #273238 0%, #20282d 100%);
+}
+
+.section--dark p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.section--light {
+  background: var(--color-light);
+}
+
+.section--rounded {
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  margin-top: -36px;
+}
+
+.section-head {
+  max-width: 720px;
+  margin-bottom: clamp(28px, 5vw, 58px);
+}
+
+.section-head--center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.section-head--center .eyebrow {
+  justify-content: center;
+}
+
+.section-head--invert h2,
+.section-head--invert h3 {
+  color: white;
+}
+
+.section-head p {
+  margin-top: 18px;
+}
+
+.card-glass {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(18px);
+}

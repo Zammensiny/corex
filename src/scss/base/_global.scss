@@ -1,0 +1,61 @@
+body {
+  min-height: 100vh;
+  font-family: var(--font-main);
+  color: var(--color-white);
+  background: var(--color-page);
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page-shell {
+  min-height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 29% 44%, rgba(96, 124, 134, 0.34), transparent 30%),
+    radial-gradient(circle at 50% 13%, rgba(255, 255, 255, 0.105), transparent 27%),
+    linear-gradient(116deg, #3c4a51 0%, #20262a 47%, #393b41 100%);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+::selection {
+  color: var(--color-white);
+  background: var(--color-accent);
+}
+
+.next-section {
+  position: relative;
+  z-index: 2;
+  min-height: 180px;
+  padding: 56px 0;
+  color: #20262a;
+  background: #f3f3f3;
+  border-radius: 52px 52px 0 0;
+}
+
+.next-section__inner {
+  max-width: 720px;
+  text-align: center;
+}
+
+.next-section p {
+  margin: 0;
+  color: #596168;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.next-section a {
+  color: var(--color-accent);
+}
+
