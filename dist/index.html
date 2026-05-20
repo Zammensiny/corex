@@ -32,7 +32,7 @@
         7 495 120 38 02
       </a>
 
-      <button class="dots-button" type="button" aria-label="Открыть дополнительные действия">
+      <button class="dots-button" type="button" aria-label="Открыть меню сайта" aria-controls="menu-modal" aria-expanded="false" data-menu-modal-open>
         <span></span><span></span><span></span><span></span>
       </button>
 
@@ -563,6 +563,71 @@
     <a class="site-footer__link" href="#top">Наверх</a>
   </div>
 </footer>
+<div class="menu-modal" id="menu-modal" aria-hidden="true" data-menu-modal data-cms-block="menu-modal">
+  <div class="menu-modal__panel" role="dialog" aria-modal="true" aria-label="Меню сайта">
+    <div class="container menu-modal__container">
+      <div class="menu-modal__top">
+        <a class="menu-modal__logo site-logo" href="#top" aria-label="На главную" data-menu-modal-link data-cms-field="logo">
+          <img class="site-logo__mark" src="assets/logo.svg" width="48" height="48" alt="">
+          <span class="site-logo__divider" aria-hidden="true"></span>
+          <span class="site-logo__text">Корекс<br>системы</span>
+        </a>
+
+        <button class="menu-modal__close" type="button" aria-label="Закрыть меню" data-menu-modal-close>
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div class="menu-modal__content">
+        <div class="menu-modal__left">
+          <nav class="menu-modal__nav" aria-label="Полное меню" data-cms-field="menu">
+            <a class="is-current" href="#about" data-menu-modal-link>О компании</a>
+            <a href="#services" data-menu-modal-link>Услуги</a>
+            <a href="#ai" data-menu-modal-link>ИИ-инструменты</a>
+            <a href="#cases" data-menu-modal-link>Кейсы</a>
+            <a href="#team" data-menu-modal-link>Команда</a>
+            <a href="#feedback" data-menu-modal-link>Форматы работы</a>
+            <a href="#reviews" data-menu-modal-link>Отзывы</a>
+          </nav>
+
+          <div class="menu-modal__contacts" data-cms-field="contacts">
+            <div class="menu-modal__mail">
+              <a href="mailto:hello@corex.systems">hello@corex.systems</a>
+              <button class="menu-modal__copy" type="button" aria-label="Скопировать почту" data-copy-email="hello@corex.systems">
+                <span></span>
+              </button>
+            </div>
+
+            <a class="menu-modal__phone" href="tel:+74951203802">+7 495 120 38 02</a>
+          </div>
+        </div>
+
+        <div class="menu-modal__visual" aria-hidden="true">
+          <div class="menu-orbit">
+            <span class="menu-orbit__ring"></span>
+            <img class="menu-orbit__center" src="assets/logo.svg" width="88" height="88" alt="">
+
+            <span class="menu-orbit__card menu-orbit__card--gear">
+              <img src="assets/img/hero-card-gear.png" alt="">
+            </span>
+            <span class="menu-orbit__card menu-orbit__card--mvp">
+              <img src="assets/img/hero-card-mvp.png" alt="">
+            </span>
+            <span class="menu-orbit__card menu-orbit__card--html">
+              <img src="assets/img/hero-card-html.png" alt="">
+            </span>
+          </div>
+
+          <ul class="menu-modal__socials" aria-label="Социальные сети">
+            <li><a href="#" aria-label="Telegram">tg</a></li>
+            <li><a href="#" aria-label="WhatsApp">wa</a></li>
+            <li><a href="#" aria-label="VK">vk</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
   </div>
 
   <script src="js/main.js" defer></script>

@@ -138,6 +138,15 @@
   opacity: 0.84;
 }
 
+.dots-button.is-active {
+  color: var(--color-white);
+}
+
+.dots-button:hover span,
+.dots-button.is-active span {
+  opacity: 1;
+}
+
 .burger {
   position: relative;
   display: none;
@@ -280,9 +289,20 @@
     border-color: transparent !important;
   }
 
-  .phone-button,
-  .dots-button {
+  .phone-button {
     display: none;
+  }
+
+  .dots-button {
+    display: grid;
+    width: 46px;
+    height: 46px;
+    grid-template-columns: repeat(2, 5px);
+    grid-auto-rows: 5px;
+    gap: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.08);
   }
 
   .burger {
