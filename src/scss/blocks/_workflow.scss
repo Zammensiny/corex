@@ -1,20 +1,31 @@
 .delivery-flow {
   position: relative;
-  z-index: 3;
+  z-index: 1;
   margin-top: -1px;
-  padding: 86px 0 92px;
-  overflow: hidden;
+  padding: 86px 0 0;
+  overflow: visible;
   color: var(--color-white);
+  background: transparent;
+  isolation: isolate;
+}
+
+.delivery-flow::after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  inset: 0 0 -1800px;
+  pointer-events: none;
   background:
-    radial-gradient(circle at 18% 18%, rgba(91, 119, 132, 0.62), transparent 36%),
-    radial-gradient(circle at 82% 48%, rgba(255, 255, 255, 0.16), transparent 34%),
-    radial-gradient(circle at 42% 92%, rgba(76, 106, 121, 0.46), transparent 30%),
-    linear-gradient(127deg, #40545c 0%, #2a3439 42%, #778188 100%);
+    radial-gradient(circle at 18% 12%, rgba(91, 119, 132, 0.62), transparent 34%),
+    radial-gradient(circle at 84% 42%, rgba(255, 255, 255, 0.16), transparent 34%),
+    radial-gradient(circle at 42% 80%, rgba(76, 106, 121, 0.46), transparent 32%),
+    linear-gradient(127deg, #40545c 0%, #2a3439 44%, #778188 100%);
 }
 
 .delivery-flow::before {
   content: "";
   position: absolute;
+  z-index: -1;
   inset: -28% auto auto 50%;
   width: 960px;
   height: 960px;
@@ -240,7 +251,7 @@
 
 @media (max-width: 980px) {
   .delivery-flow {
-    padding: 72px 0 76px;
+    padding: 72px 0 0;
   }
 
   .workflow {
@@ -268,7 +279,7 @@
 
 @media (max-width: 720px) {
   .delivery-flow {
-    padding: 56px 0 62px;
+    padding: 56px 0 0;
   }
 
   .workflow {
