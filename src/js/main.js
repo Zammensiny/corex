@@ -192,3 +192,60 @@ casesBlocks.forEach((casesBlock) => {
     tab.setAttribute('tabindex', index === 0 ? '0' : '-1');
   });
 });
+
+const workflowSliders = document.querySelectorAll('[data-workflow-slider]');
+
+workflowSliders.forEach((slider) => {
+  const viewport = slider.querySelector('[data-workflow-viewport]');
+  const track = slider.querySelector('[data-workflow-track]');
+  const slides = Array.from(slider.querySelectorAll('[data-workflow-slide]'));
+  const prevButton = slider.querySelector('[data-workflow-prev]');
+  const nextButton = slider.querySelector('[data-workflow-next]');
+
+  if (!viewport || !track || !slides.length) return;
+
+  let activeIndex = slides.findIndex((slide) => slide.classList.contains('is-active'));
+  if (activeIndex < 0) activeIndex = 0;
+
+  const updateSlider = () => {
+    const activeSlide = slides[activeIndex];
+    const viewportCenter = viewport.clientWidth / 2;
+    const slideCenter = activeSlide.offsetLeft + activeSlide.offsetWidth / 2;
+    const offset = Math.max(0, slideCenter - viewportCenter);
+
+    track.style.transform = `translate3d(${-offset}px, 0, 0)`;
+
+    slides.forEach((slide, index) => {
+      const isActive = index === activeIndex;
+      slide.classList.toggle('is-active', isActive);
+      slide.setAttribute('aria-hidden', String(!isActive));
+    });
+  };
+
+  const setSlide = (nextIndex) => {
+    activeIndex = (nextIndex + slides.length) % slides.length;
+    updateSlider();
+  };
+
+  prevButton?.addEventListener('click', () => setSlide(activeIndex - 1));
+  nextButton?.addEventListener('click', () => setSlide(activeIndex + 1));
+
+  slides.forEach((slide, index) => {
+    slide.addEventListener('click', () => {
+      if (index !== activeIndex) setSlide(index);
+    });
+  });
+
+  slider.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') setSlide(activeIndex - 1);
+    if (event.key === 'ArrowRight') setSlide(activeIndex + 1);
+  });
+
+  let resizeTimer = null;
+  window.addEventListener('resize', () => {
+    window.clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(updateSlider, 90);
+  });
+
+  requestAnimationFrame(updateSlider);
+});
