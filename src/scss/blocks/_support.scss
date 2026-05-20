@@ -52,9 +52,8 @@
 }
 
 .support-slider__viewport {
-  --support-edge-space: clamp(20px, 3vw, 44px);
-  width: calc(100vw - var(--support-edge-space) - var(--support-edge-space));
-  margin-left: calc(50% - 50vw + var(--support-edge-space));
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
   overflow: hidden;
 }
 
@@ -245,12 +244,8 @@
     margin-top: 30px;
   }
 
-  .support-slider__viewport {
-    --support-edge-space: 16px;
-  }
-
   .support-slider__track {
-    padding: 0 0;
+    padding: 0 var(--gutter);
   }
 
   .support-card {

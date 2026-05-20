@@ -51,18 +51,30 @@
   padding: 30px 28px 26px;
 }
 
-.service-row__body--accent-dot::after {
+.service-row__body {
+  cursor: pointer;
+}
+
+.service-row__body::after {
   content: "";
   position: absolute;
   top: 18px;
   right: 18px;
-  width: 25px;
-  height: 25px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
-  background:
-    radial-gradient(circle at 50% 50%, #ffffff 0 2px, transparent 3px),
-    var(--color-accent);
-  box-shadow: 0 10px 22px rgba(52, 123, 233, 0.24);
+  background: var(--color-accent) url("../assets/icons/service-arrow.svg") center / 14px 14px no-repeat;
+  box-shadow: 0 12px 26px rgba(52, 123, 233, 0.26);
+  opacity: 0;
+  transform: translate(-6px, 6px) scale(0.78);
+  transition: opacity 0.2s ease, transform 0.24s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+
+.service-row__body:hover::after,
+.service-row__body:focus-within::after {
+  opacity: 1;
+  transform: translate(0, 0) scale(1);
 }
 
 .service-row__title {

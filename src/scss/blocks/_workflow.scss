@@ -3,7 +3,7 @@
   z-index: 1;
   margin-top: -1px;
   padding: 86px 0 0;
-  overflow: visible;
+  overflow: hidden;
   color: var(--color-white);
   background: transparent;
   isolation: isolate;
@@ -13,7 +13,7 @@
   content: "";
   position: absolute;
   z-index: -2;
-  inset: 0 0 -1800px;
+  inset: 0;
   pointer-events: none;
   background:
     radial-gradient(circle at 18% 12%, rgba(91, 119, 132, 0.62), transparent 34%),

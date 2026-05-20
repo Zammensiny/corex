@@ -498,3 +498,10 @@
     animation-duration: 0.01ms !important;
   }
 }
+
+.menu-modal__socials img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}

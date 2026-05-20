@@ -63,3 +63,12 @@ body {
 body.is-menu-modal-open {
   overflow: hidden;
 }
+
+body.is-request-modal-open {
+  overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
+}

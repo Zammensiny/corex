@@ -88,6 +88,13 @@
   box-shadow: 0 18px 42px rgba(77, 104, 119, 0.16);
 }
 
+
+.cases-tabs__button.is-active:hover:not(:disabled),
+.cases-tabs__button.is-active:focus-visible:not(:disabled) {
+  color: #ffffff;
+  background: #4d6877;
+}
+
 .cases-tabs__button.is-locked {
   color: rgba(37, 43, 48, 0.26);
   cursor: not-allowed;

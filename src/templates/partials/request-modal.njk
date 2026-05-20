@@ -1,0 +1,42 @@
+<div class="request-modal" id="request-modal" aria-hidden="true" data-request-modal data-cms-block="request-modal">
+  <div class="request-modal__backdrop" data-request-modal-close></div>
+
+  <div class="request-modal__panel" role="dialog" aria-modal="true" aria-labelledby="request-modal-title">
+    <button class="request-modal__close" type="button" aria-label="Закрыть окно" data-request-modal-close>
+      <span aria-hidden="true"></span>
+    </button>
+
+    <div class="request-modal__visual" aria-hidden="true">
+      <span></span>
+      <img src="assets/logo.svg" width="54" height="54" alt="">
+    </div>
+
+    <div class="request-modal__content">
+      <p class="request-modal__eyebrow" data-request-modal-eyebrow>Бриф</p>
+      <h2 class="request-modal__title" id="request-modal-title" data-request-modal-title>Обсудить задачу</h2>
+      <p class="request-modal__text" data-request-modal-text>Оставьте контакты — уточним задачу и предложим ближайший рабочий шаг.</p>
+    </div>
+
+    <form class="request-form" action="send.php" method="post" data-ajax-form data-form-type="Обсудить задачу">
+      <input type="hidden" name="form_type" value="Обсудить задачу" data-request-form-type>
+
+      <label class="request-form__field">
+        <span class="visually-hidden">Имя</span>
+        <input type="text" name="name" placeholder="Имя" autocomplete="name">
+      </label>
+
+      <label class="request-form__field">
+        <span class="visually-hidden">Номер телефона</span>
+        <input type="tel" name="phone" placeholder="Номер телефона" autocomplete="tel">
+      </label>
+
+      <label class="request-form__field request-form__field--wide">
+        <span class="visually-hidden">Комментарий</span>
+        <textarea name="message" placeholder="Коротко о задаче"></textarea>
+      </label>
+
+      <button class="button button--primary request-form__submit" type="submit" data-request-submit>Отправить</button>
+      <p class="request-form__status" aria-live="polite" data-form-status></p>
+    </form>
+  </div>
+</div>

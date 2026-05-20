@@ -351,3 +351,22 @@
     height: 54px;
   }
 }
+
+.contact-form__status {
+  min-height: 18px;
+  margin: 0;
+  color: rgba(36, 43, 48, 0.68);
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.contact-form__status.is-success {
+  color: var(--color-accent);
+}
+
+.contact-card__socials img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}

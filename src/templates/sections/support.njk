@@ -9,7 +9,7 @@
   <div class="support-slider" data-support-slider data-cms-field="slider">
     <div class="support-slider__viewport" data-support-viewport>
       <div class="support-slider__track" data-support-track>
-        <article class="support-slide" data-support-slide>
+        <article class="support-slide is-active" data-support-slide>
           <div class="support-card">
             <span class="support-card__avatar" aria-hidden="true"></span>
             <h3>Дмитрий</h3>
@@ -25,7 +25,7 @@
           </div>
         </article>
 
-        <article class="support-slide is-active" data-support-slide>
+        <article class="support-slide" data-support-slide>
           <div class="support-card">
             <span class="support-card__avatar" aria-hidden="true"></span>
             <h3>Анна</h3>
@@ -93,8 +93,8 @@
 
     <div class="container support-slider__footer">
       <div class="support-slider__cta">
-        <a class="button button--primary support-slider__cta-button" href="#brief">Обсудить задачу</a>
-        <a class="button button--light support-slider__cta-button" href="#audit">Получить аудит</a>
+        <button class="button button--primary support-slider__cta-button" type="button" data-request-modal-open data-request-type="brief">Обсудить задачу</button>
+        <button class="button button--light support-slider__cta-button" type="button" data-request-modal-open data-request-type="audit">Получить аудит</button>
       </div>
 
       <div class="support-slider__controls" aria-label="Переключение отзывов">

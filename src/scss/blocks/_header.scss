@@ -235,58 +235,7 @@
   }
 
   .main-nav {
-    position: absolute;
-    z-index: 35;
-    top: calc(100% + 14px);
-    right: 0;
-    display: grid;
-    width: min(304px, calc(100vw - var(--gutter) * 2));
-    gap: 8px;
-    padding: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 22px;
-    background: rgba(20, 27, 31, 0.94);
-    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
-    backdrop-filter: blur(14px);
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-8px) scale(0.98);
-    transform-origin: top right;
-    transition: opacity 0.18s ease, visibility 0.18s ease, transform 0.18s ease;
-  }
-
-  .main-nav.is-open {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0) scale(1);
-  }
-
-  .main-nav a,
-  .main-nav__phone {
-    display: flex !important;
-    width: 100%;
-    min-height: 48px;
-    justify-content: center;
-    padding: 0 18px;
-    border-radius: 13px;
-    border-color: rgba(255, 255, 255, 0.08);
-    color: rgba(255, 255, 255, 0.88);
-    background: rgba(255, 255, 255, 0.08);
-    box-shadow: none;
-    font-size: 14px;
-    font-weight: 700;
-  }
-
-  .main-nav a:hover,
-  .main-nav a.is-active {
-    background: var(--color-accent);
-  }
-
-  .main-nav__phone {
-    margin-top: 4px;
-    color: #ffffff !important;
-    background: var(--color-accent) !important;
-    border-color: transparent !important;
+    display: none;
   }
 
   .phone-button {
@@ -306,9 +255,7 @@
   }
 
   .burger {
-    z-index: 40;
-    display: grid;
-    flex: 0 0 auto;
+    display: none;
   }
 }
 
@@ -332,8 +279,6 @@
   }
 
   .main-nav {
-    left: 0;
-    right: 0;
-    width: auto;
+    display: none;
   }
 }

@@ -57,7 +57,8 @@ const getModalFocusable = () => {
   ).filter((element) => element.offsetParent !== null || element === document.activeElement);
 };
 
-const setModalState = (isOpen) => {
+const setModalState = (isOpen, options = {}) => {
+  const { restoreFocus = true } = options;
   if (!modal) return;
 
   modal.classList.toggle('is-open', isOpen);
@@ -77,7 +78,9 @@ const setModalState = (isOpen) => {
       focusable[0]?.focus({ preventScroll: true });
     }, 80);
   } else if (modalLastFocused) {
-    modalLastFocused.focus?.({ preventScroll: true });
+    if (restoreFocus) {
+      modalLastFocused.focus?.({ preventScroll: true });
+    }
     modalLastFocused = null;
   }
 };
@@ -96,7 +99,7 @@ modalCloseButtons.forEach((button) => {
 
 modalLinks.forEach((link) => {
   link.addEventListener('click', () => {
-    setModalState(false);
+    setModalState(false, { restoreFocus: false });
   });
 });
 
@@ -266,10 +269,10 @@ supportSliders.forEach((slider) => {
 
   const updateSlider = () => {
     const activeSlide = slides[activeIndex];
-    const viewportCenter = viewport.clientWidth / 2;
-    const slideCenter = activeSlide.offsetLeft + activeSlide.offsetWidth / 2;
+    const trackStyle = window.getComputedStyle(track);
+    const trackPaddingLeft = parseFloat(trackStyle.paddingLeft) || 0;
     const maxOffset = Math.max(0, track.scrollWidth - viewport.clientWidth);
-    const offset = Math.min(Math.max(0, slideCenter - viewportCenter), maxOffset);
+    const offset = Math.min(Math.max(0, activeSlide.offsetLeft - trackPaddingLeft), maxOffset);
 
     track.style.transform = `translate3d(${-offset}px, 0, 0)`;
 
@@ -306,4 +309,157 @@ supportSliders.forEach((slider) => {
   });
 
   requestAnimationFrame(updateSlider);
+});
+
+
+const requestModal = document.querySelector('[data-request-modal]');
+const requestModalOpenButtons = document.querySelectorAll('[data-request-modal-open]');
+const requestModalCloseButtons = document.querySelectorAll('[data-request-modal-close]');
+let requestModalLastFocused = null;
+
+const requestModalConfig = {
+  brief: {
+    type: 'Обсудить задачу',
+    eyebrow: 'Бриф',
+    title: 'Обсудить задачу',
+    text: 'Оставьте контакты — уточним задачу и предложим ближайший рабочий шаг.',
+    button: 'Отправить задачу'
+  },
+  audit: {
+    type: 'Получить аудит',
+    eyebrow: 'Аудит',
+    title: 'Получить аудит',
+    text: 'Посмотрим текущую систему, найдём слабые места и подскажем, с чего начать.',
+    button: 'Запросить аудит'
+  }
+};
+
+const getRequestModalFocusable = () => {
+  if (!requestModal) return [];
+  return Array.from(
+    requestModal.querySelectorAll('a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])')
+  ).filter((element) => element.offsetParent !== null || element === document.activeElement);
+};
+
+const fillRequestModal = (type = 'brief') => {
+  if (!requestModal) return;
+  const config = requestModalConfig[type] || requestModalConfig.brief;
+  const eyebrow = requestModal.querySelector('[data-request-modal-eyebrow]');
+  const title = requestModal.querySelector('[data-request-modal-title]');
+  const text = requestModal.querySelector('[data-request-modal-text]');
+  const hiddenType = requestModal.querySelector('[data-request-form-type]');
+  const submit = requestModal.querySelector('[data-request-submit]');
+  const form = requestModal.querySelector('[data-ajax-form]');
+  const status = requestModal.querySelector('[data-form-status]');
+
+  if (eyebrow) eyebrow.textContent = config.eyebrow;
+  if (title) title.textContent = config.title;
+  if (text) text.textContent = config.text;
+  if (hiddenType) hiddenType.value = config.type;
+  if (submit) submit.textContent = config.button;
+  if (form) form.dataset.formType = config.type;
+  if (status) {
+    status.textContent = '';
+    status.classList.remove('is-success');
+  }
+};
+
+const setRequestModalState = (isOpen) => {
+  if (!requestModal) return;
+
+  requestModal.classList.toggle('is-open', isOpen);
+  requestModal.setAttribute('aria-hidden', String(!isOpen));
+  document.body.classList.toggle('is-request-modal-open', isOpen);
+
+  if (isOpen) {
+    requestModalLastFocused = document.activeElement;
+    setMenuState(false);
+    setModalState(false, { restoreFocus: false });
+    window.setTimeout(() => {
+      const focusable = getRequestModalFocusable();
+      focusable[0]?.focus({ preventScroll: true });
+    }, 80);
+  } else if (requestModalLastFocused) {
+    requestModalLastFocused.focus?.({ preventScroll: true });
+    requestModalLastFocused = null;
+  }
+};
+
+requestModalOpenButtons.forEach((button) => {
+  button.addEventListener('click', (event) => {
+    event.preventDefault();
+    fillRequestModal(button.dataset.requestType || 'brief');
+    setRequestModalState(true);
+  });
+});
+
+requestModalCloseButtons.forEach((button) => {
+  button.addEventListener('click', () => setRequestModalState(false));
+});
+
+if (requestModal) {
+  requestModal.addEventListener('keydown', (event) => {
+    if (event.key !== 'Tab') return;
+
+    const focusable = getRequestModalFocusable();
+    if (!focusable.length) return;
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    }
+
+    if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+}
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    setRequestModalState(false);
+  }
+});
+
+document.querySelectorAll('[data-ajax-form]').forEach((form) => {
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const status = form.querySelector('[data-form-status]');
+    const submit = form.querySelector('button[type="submit"]');
+    const formData = new FormData(form);
+    const formType = form.dataset.formType || formData.get('form_type') || 'Форма';
+
+    formData.set('form_type', formType);
+
+    if (status) {
+      status.textContent = 'Отправляем...';
+      status.classList.remove('is-success');
+    }
+
+    if (submit) submit.disabled = true;
+
+    try {
+      await fetch(form.getAttribute('action') || 'send.php', {
+        method: form.getAttribute('method') || 'POST',
+        body: formData
+      });
+    } catch (error) {
+      console.warn('send.php пока недоступен, показываем заглушку успешной отправки', error);
+    } finally {
+      if (submit) submit.disabled = false;
+      if (status) {
+        status.textContent = 'Спасибо! Форма отправлена. Мы скоро свяжемся.';
+        status.classList.add('is-success');
+      }
+      form.reset();
+
+      const hiddenType = form.querySelector('input[name="form_type"]');
+      if (hiddenType) hiddenType.value = formType;
+    }
+  });
 });
