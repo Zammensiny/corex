@@ -1,12 +1,16 @@
 const navToggle = document.querySelector('.burger');
 const nav = document.querySelector('.main-nav');
+const navHiddenText = navToggle?.querySelector('.visually-hidden');
 
 if (navToggle && nav) {
   const setMenuState = (isOpen) => {
     nav.classList.toggle('is-open', isOpen);
     navToggle.classList.toggle('is-open', isOpen);
-    document.body.classList.toggle('menu-open', isOpen);
     navToggle.setAttribute('aria-expanded', String(isOpen));
+
+    if (navHiddenText) {
+      navHiddenText.textContent = isOpen ? 'Закрыть меню' : 'Открыть меню';
+    }
   };
 
   navToggle.addEventListener('click', (event) => {

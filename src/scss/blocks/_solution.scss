@@ -66,7 +66,7 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px 16px;
-  max-width: 970px;
+  max-width: var(--container);
   margin: 43px auto 0;
 }
 
@@ -77,8 +77,8 @@
 }
 
 .approach-card {
-  min-height: 220px;
-  padding: 23px 22px 26px;
+  min-height: 246px;
+  padding: 26px 28px 30px;
 }
 
 .approach-card--dark,
@@ -118,7 +118,7 @@
   max-width: 440px;
   margin: 32px 0 0;
   font-family: var(--font-heading);
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 400;
   line-height: 1.12;
   letter-spacing: 0.036em;
@@ -164,8 +164,8 @@
 }
 
 .approach-result {
-  min-height: 103px;
-  padding: 23px 24px 21px;
+  min-height: 112px;
+  padding: 25px 28px 23px;
 }
 
 .approach-result strong {
@@ -208,7 +208,7 @@
   }
 
   .approach-grid {
-    max-width: 720px;
+    max-width: 860px;
   }
 
   .approach-card h3 {

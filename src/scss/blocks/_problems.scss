@@ -47,7 +47,7 @@
 .problems-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.4fr) minmax(0, 1fr);
-  grid-auto-rows: 164px;
+  grid-auto-rows: 176px;
   gap: 14px;
   width: 100%;
   margin-top: 44px;
@@ -75,7 +75,7 @@
 
 .problem-card p {
   margin: 0;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   line-height: 1.36;
   letter-spacing: 0.012em;
@@ -172,7 +172,7 @@
   position: absolute;
   right: 24px;
   bottom: 13px;
-  width: min(63%, 360px);
+  width: min(64%, 420px);
   height: 122px;
   pointer-events: none;
 }
@@ -181,7 +181,7 @@
   position: absolute;
   right: 0;
   bottom: 8px;
-  width: 260px;
+  width: 310px;
   height: 90px;
   object-fit: fill;
   opacity: 0.95;
@@ -191,7 +191,7 @@
   position: absolute;
   right: 0;
   bottom: 43px;
-  width: 308px;
+  width: 360px;
   height: 58px;
   object-fit: fill;
 }
@@ -201,7 +201,7 @@
   right: 16px;
   bottom: 0;
   display: flex;
-  width: min(100%, 282px);
+  width: min(100%, 330px);
   height: 43px;
   align-items: center;
   gap: 14px;
