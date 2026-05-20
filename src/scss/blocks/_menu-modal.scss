@@ -105,7 +105,7 @@
 .menu-modal__left {
   display: grid;
   align-content: space-between;
-  min-height: 620px;
+  min-height: 700px;
   gap: 40px;
 }
 
@@ -241,15 +241,6 @@
   box-shadow: 0 13px 32px rgba(52, 123, 233, 0.32);
 }
 
-.menu-modal__phone::before {
-  content: "";
-  width: 4px;
-  height: 4px;
-  margin-right: 14px;
-  border-radius: 50%;
-  background: currentColor;
-}
-
 .menu-modal__visual {
   position: relative;
   min-height: 610px;
@@ -266,7 +257,7 @@
 
 .menu-orbit {
   position: absolute;
-  top: 6px;
+  top: -40px;
   right: 50px;
   width: 556px;
   height: 556px;
@@ -353,7 +344,7 @@
 .menu-modal__socials {
   position: absolute;
   right: 75px;
-  bottom: 0;
+  bottom: -50px;
   display: flex;
   gap: 18px;
   margin: 0;

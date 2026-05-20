@@ -24,21 +24,21 @@
 
 @font-face {
   font-family: "Navigo";
-  src: url("../assets/fonts/Navigo-Regular.woff2") format("woff2"), url("../assets/fonts/Navigo-Regular.woff") format("woff");
+  src: url("../assets/fonts/navigo-regular.ttf") format("truetype");
   font-weight: 400 800;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Muller";
-  src: url("../assets/fonts/Muller-Regular.woff2") format("woff2"), url("../assets/fonts/Muller-Regular.woff") format("woff");
+  src: url("../assets/fonts/muller-regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Muller";
-  src: url("../assets/fonts/Muller-Bold.woff2") format("woff2"), url("../assets/fonts/Muller-Bold.woff") format("woff");
+  src: url("../assets/fonts/muller-bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -615,7 +615,7 @@ html {
 .menu-modal__left {
   display: grid;
   align-content: space-between;
-  min-height: 620px;
+  min-height: 700px;
   gap: 40px;
 }
 
@@ -771,15 +771,6 @@ html {
   box-shadow: 0 13px 32px rgba(52, 123, 233, 0.32);
 }
 
-.menu-modal__phone::before {
-  content: "";
-  width: 4px;
-  height: 4px;
-  margin-right: 14px;
-  border-radius: 50%;
-  background: currentColor;
-}
-
 .menu-modal__visual {
   position: relative;
   min-height: 610px;
@@ -796,7 +787,7 @@ html {
 
 .menu-orbit {
   position: absolute;
-  top: 6px;
+  top: -40px;
   right: 50px;
   width: 556px;
   height: 556px;
@@ -891,7 +882,7 @@ html {
 .menu-modal__socials {
   position: absolute;
   right: 75px;
-  bottom: 0;
+  bottom: -50px;
   display: flex;
   gap: 18px;
   margin: 0;
@@ -2969,7 +2960,7 @@ html {
   padding: 72px 0 88px;
   color: #252b30;
   background: #f3f3f1;
-  border-radius: 54px 54px 0 0;
+  border-radius: 54px;
 }
 
 .cases__container {
