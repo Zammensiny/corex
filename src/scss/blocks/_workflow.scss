@@ -1,14 +1,38 @@
-.workflow {
+.delivery-flow {
   position: relative;
   z-index: 3;
   margin-top: -1px;
-  padding: 86px 0 96px;
+  padding: 86px 0 92px;
   overflow: hidden;
   color: var(--color-white);
   background:
-    radial-gradient(circle at 22% 28%, rgba(91, 119, 132, 0.55), transparent 34%),
-    radial-gradient(circle at 74% 62%, rgba(255, 255, 255, 0.14), transparent 34%),
+    radial-gradient(circle at 18% 18%, rgba(91, 119, 132, 0.62), transparent 36%),
+    radial-gradient(circle at 82% 48%, rgba(255, 255, 255, 0.16), transparent 34%),
+    radial-gradient(circle at 42% 92%, rgba(76, 106, 121, 0.46), transparent 30%),
     linear-gradient(127deg, #40545c 0%, #2a3439 42%, #778188 100%);
+}
+
+.delivery-flow::before {
+  content: "";
+  position: absolute;
+  inset: -28% auto auto 50%;
+  width: 960px;
+  height: 960px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.12), transparent 62%);
+  transform: translateX(-50%);
+  pointer-events: none;
+  opacity: 0.38;
+}
+
+.workflow {
+  position: relative;
+  z-index: 3;
+  margin-top: 0;
+  padding: 0;
+  overflow: visible;
+  color: var(--color-white);
+  background: transparent;
 }
 
 .workflow__container {
@@ -215,8 +239,12 @@
 }
 
 @media (max-width: 980px) {
+  .delivery-flow {
+    padding: 72px 0 76px;
+  }
+
   .workflow {
-    padding: 72px 0 82px;
+    padding: 0;
   }
 
   .workflow__header {
@@ -239,8 +267,12 @@
 }
 
 @media (max-width: 720px) {
+  .delivery-flow {
+    padding: 56px 0 62px;
+  }
+
   .workflow {
-    padding: 56px 0 64px;
+    padding: 0;
   }
 
   .workflow__container {
