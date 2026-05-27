@@ -2,7 +2,7 @@
   <div class="menu-modal__panel" role="dialog" aria-modal="true" aria-label="Меню сайта">
     <div class="container menu-modal__container">
       <div class="menu-modal__top">
-        <a class="menu-modal__logo site-logo" href="#top" aria-label="На главную" data-menu-modal-link data-cms-field="logo">
+        <a class="menu-modal__logo site-logo" href="index.html" aria-label="На главную" data-menu-modal-link data-cms-field="logo">
           <img class="site-logo__mark" src="assets/logo.svg" width="48" height="48" alt="">
           <span class="site-logo__divider" aria-hidden="true"></span>
           <span class="site-logo__text">Корекс<br>системы</span>
@@ -16,13 +16,8 @@
       <div class="menu-modal__content">
         <div class="menu-modal__left">
           <nav class="menu-modal__nav" aria-label="Полное меню" data-cms-field="menu">
-            <a class="is-current" href="#about" data-menu-modal-link>О компании</a>
-            <a href="#services" data-menu-modal-link>Услуги</a>
-            <a href="#ai" data-menu-modal-link>ИИ-инструменты</a>
-            <a href="#cases" data-menu-modal-link>Кейсы</a>
-            <a href="#team" data-menu-modal-link>Команда</a>
-            <a href="#feedback" data-menu-modal-link>Форматы работы</a>
-            <a href="#reviews" data-menu-modal-link>Отзывы</a>
+            <a{% if pageId == "about" %} class="is-current"{% endif %} href="about.html" data-menu-modal-link>О нас</a>
+            <a{% if pageId == "ai" %} class="is-current"{% endif %} href="ai.html" data-menu-modal-link>ИИ-инструменты</a>
           </nav>
 
           <div class="menu-modal__contacts" data-cms-field="contacts">

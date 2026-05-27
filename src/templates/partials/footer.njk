@@ -1,7 +1,7 @@
 <footer class="site-footer" data-cms-block="footer">
   <div class="container site-footer__container">
     <div class="site-footer__top">
-      <a class="site-footer__logo" href="#top" aria-label="На главную" data-cms-field="logo">
+      <a class="site-footer__logo" href="index.html" aria-label="На главную" data-cms-field="logo">
         <img src="assets/logo.svg" width="48" height="48" alt="">
         <span class="site-footer__logo-text">Корекс<br>системы</span>
       </a>
@@ -12,34 +12,9 @@
     </div>
 
     <nav class="site-footer__nav" aria-label="Навигация в подвале" data-cms-field="menu">
-      <a href="#about">О компании</a>
-      <a class="is-active" href="#ai">ИИ-инструменты</a>
-      <a href="#cases">Кейсы</a>
-      <a href="#team">Команда</a>
+      <a{% if pageId == "about" %} class="is-active"{% endif %} href="about.html">О нас</a>
+      <a{% if pageId == "ai" %} class="is-active"{% endif %} href="ai.html">ИИ-инструменты</a>
     </nav>
-
-    <div class="site-footer__links" data-cms-field="columns">
-      <ul>
-        <li><a href="#brief">Быстрые правки</a></li>
-        <li><a href="#workflow">Быстрые правки</a></li>
-        <li><a href="#support">Быстрые правки</a></li>
-      </ul>
-      <ul>
-        <li><a href="#services">Быстрые правки</a></li>
-        <li><a href="#cases">Быстрые правки</a></li>
-        <li><a href="#audit">Быстрые правки</a></li>
-      </ul>
-      <ul>
-        <li><a href="#solution">Быстрые правки</a></li>
-        <li><a href="#problems">Быстрые правки</a></li>
-        <li><a href="#delivery">Быстрые правки</a></li>
-      </ul>
-      <ul>
-        <li><a href="#fit">Быстрые правки</a></li>
-        <li><a href="#top">Быстрые правки</a></li>
-        <li><a href="#brief">Быстрые правки</a></li>
-      </ul>
-    </div>
 
     <div class="site-footer__bottom" data-cms-field="legal">
       <a href="#">Политика обработки персональных данных</a>

@@ -1,17 +1,8 @@
+{% set pageId = "ai" %}
+{% set pageTitle = "Корекс системы — веб-сервисы, бизнес и ИИ" %}
+{% set pageDescription = "Разрабатываем сложные веб-сервисы, оцифровываем бизнес и внедряем ИИ." %}
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-  {% include "sections/hero.njk" %}
-  {% include "sections/problems.njk" %}
-  {% include "sections/solution.njk" %}
-  {% include "sections/services.njk" %}
-  {% include "sections/fit.njk" %}
-  {% include "sections/cases.njk" %}
-  <div class="delivery-flow" id="delivery" data-cms-block="delivery-flow">
-    {% include "sections/workflow.njk" %}
-    {% include "sections/support.njk" %}
-    {% include "sections/contact.njk" %}
-    {% include "partials/footer.njk" %}
-  </div>
-
+  {% include "page-content/home.njk" %}
 {% endblock %}

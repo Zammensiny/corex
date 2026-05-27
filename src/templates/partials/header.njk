@@ -1,16 +1,14 @@
 <header class="site-header" data-cms-block="header">
   <div class="container site-header__inner">
-    <a class="site-logo" href="#top" aria-label="На главную" data-cms-field="logo">
+    <a class="site-logo" href="index.html" aria-label="На главную" data-cms-field="logo">
       <img class="site-logo__mark" src="assets/logo.svg" width="48" height="48" alt="">
       <span class="site-logo__divider" aria-hidden="true"></span>
       <span class="site-logo__text">Корекс<br>системы</span>
     </a>
 
     <nav class="main-nav" id="main-nav" aria-label="Основная навигация" data-cms-field="menu">
-      <a href="#about">О компании</a>
-      <a class="is-active" href="#ai">ИИ-инструменты</a>
-      <a href="#cases">Кейсы</a>
-      <a href="#team">Команда</a>
+      <a{% if pageId == "about" %} class="is-active"{% endif %} href="about.html">О нас</a>
+      <a{% if pageId == "ai" %} class="is-active"{% endif %} href="ai.html">ИИ-инструменты</a>
       <a class="main-nav__phone" href="tel:+74951203802">+7 495 120 38 02</a>
     </nav>
 
