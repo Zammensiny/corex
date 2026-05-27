@@ -1,6 +1,11 @@
 .about-hero {
-  min-height: 820px;
-  padding-bottom: 74px;
+  min-height: 879px;
+  padding-bottom: 82px;
+}
+
+.about-hero__container {
+  width: calc(100% - var(--gutter) * 2);
+  max-width: none;
 }
 
 .about-hero__content {

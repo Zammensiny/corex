@@ -1,0 +1,656 @@
+.about-losses {
+  position: relative;
+  z-index: 2;
+  margin-top: -1px;
+  padding: 82px 0 94px;
+  color: var(--color-white);
+  background:
+    radial-gradient(circle at 48% 0%, rgba(255, 255, 255, 0.12), transparent 28%),
+    radial-gradient(circle at 42% 88%, rgba(102, 126, 136, 0.22), transparent 24%),
+    linear-gradient(116deg, #3c4a51 0%, #20262a 47%, #393b41 100%);
+}
+
+.about-losses__container {
+  width: calc(100% - var(--gutter) * 2);
+  max-width: none;
+}
+
+.about-losses__head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 430px);
+  align-items: start;
+  gap: 48px;
+  width: 100%;
+  margin: 0;
+}
+
+.about-losses__title {
+  margin: 0;
+  color: #f0f0f0;
+  font-family: var(--font-heading);
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+.about-losses__lead {
+  max-width: 390px;
+  margin: 9px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 15px;
+  line-height: 1.36;
+  letter-spacing: 0.02em;
+}
+
+.losses-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2.4fr;
+  grid-auto-rows: 160px;
+  gap: 16px;
+  width: 100%;
+  margin: 43px 0 0;
+}
+
+.loss-card {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  color: #30383d;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 22px 56px rgba(0, 0, 0, 0.13);
+}
+
+.loss-card--small {
+  padding: 24px 24px 20px;
+}
+
+.loss-card--image {
+  padding: 24px 26px;
+}
+
+.loss-card--clock {
+  grid-column: span 2;
+}
+
+.loss-card__icon {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 9px;
+  background: #5b8190;
+}
+
+.loss-card__icon img {
+  display: block;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.loss-card__label {
+  position: absolute;
+  z-index: 2;
+  left: 28px;
+  top: 59px;
+  color: rgba(78, 92, 100, 0.68);
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.loss-card p {
+  position: relative;
+  z-index: 2;
+  max-width: 330px;
+  margin: 18px 0 0;
+  color: rgba(31, 37, 40, 0.86);
+  font-size: 15px;
+  line-height: 1.32;
+  letter-spacing: 0.012em;
+}
+
+.loss-card--small p {
+  max-width: 180px;
+}
+
+.loss-card__image {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.loss-card--check p {
+  max-width: 330px;
+}
+
+.loss-card--check .loss-card__image {
+  object-position: 100% 50%;
+}
+
+.loss-card--clock .loss-card__image {
+  object-position: 100% 50%;
+}
+
+.loss-card--team .loss-card__image {
+  object-position: 100% 50%;
+}
+
+
+.about-approach {
+  width: 100%;
+  margin-top: 104px;
+}
+
+.about-approach__head {
+  width: 100%;
+  text-align: center;
+}
+
+.about-approach__title {
+  margin: 0;
+  color: #f0f0f0;
+  font-family: var(--font-heading);
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+.about-approach__lead {
+  margin: 18px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 15px;
+  line-height: 1.42;
+  letter-spacing: 0.02em;
+}
+
+.about-approach__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+  margin-top: 43px;
+}
+
+.about-approach-card {
+  min-width: 0;
+  min-height: 230px;
+  padding: 26px 28px 30px;
+  border-radius: 20px;
+}
+
+.about-approach-card--dark {
+  color: #ffffff;
+  background: #4b6574;
+}
+
+.about-approach-card--light {
+  color: #252b30;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.about-approach-card__label {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 21px;
+  border-radius: 10px;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+
+.about-approach-card--dark .about-approach-card__label {
+  color: rgba(255, 255, 255, 0.76);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.about-approach-card--light .about-approach-card__label {
+  color: rgba(255, 255, 255, 0.95);
+  background: #4b6574;
+}
+
+.about-approach-card h3 {
+  margin: 31px 0 0;
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: 0.036em;
+  text-transform: uppercase;
+}
+
+.about-approach-card--dark h3 {
+  color: #ffffff;
+}
+
+.about-approach-card--light h3 {
+  color: #303439;
+}
+
+.about-approach-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 8px;
+  width: 100%;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-approach-tags li {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 21px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.about-approach-card--dark .about-approach-tags li {
+  color: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.about-approach-card--light .about-approach-tags li {
+  color: #30383d;
+  border: 1px solid rgba(48, 56, 61, 0.12);
+  background: rgba(255, 255, 255, 0.38);
+}
+
+
+
+.about-practices {
+  width: 100%;
+  margin-top: 104px;
+}
+
+.about-practices__head {
+  width: 100%;
+  text-align: center;
+}
+
+.about-practices__title {
+  margin: 0;
+  color: #f0f0f0;
+  font-family: var(--font-heading);
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 1.16;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+.about-practices__lead {
+  margin: 18px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 15px;
+  line-height: 1.42;
+  letter-spacing: 0.02em;
+}
+
+.about-practices__logos {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+  width: 100%;
+  margin-top: 44px;
+}
+
+.about-practice-logo {
+  display: grid;
+  min-height: 78px;
+  place-items: center;
+  padding: 12px 20px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.about-practice-logo img {
+  display: block;
+  max-width: 100%;
+  max-height: 54px;
+  object-fit: contain;
+}
+
+.about-practice-logo--openai img {
+  width: 45px;
+  height: 46px;
+}
+
+.about-practice-logo--text {
+  color: #303439;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+
+.about-practices__steps {
+  display: grid;
+  gap: 10px;
+  width: 100%;
+  margin-top: 42px;
+}
+
+.practice-step {
+  position: relative;
+  min-height: 58px;
+  overflow: hidden;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.045);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.035);
+}
+
+.practice-step__bar {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  display: block;
+  border-radius: inherit;
+}
+
+.practice-step__text {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-height: 58px;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.practice-step--talk .practice-step__bar {
+  left: 0;
+  width: 24%;
+  background: #6b94a4;
+}
+
+.practice-step--talk .practice-step__text {
+  margin-left: calc(24% + 20px);
+}
+
+.practice-step--numbers .practice-step__bar {
+  left: 24%;
+  width: 20%;
+  background: var(--color-accent);
+}
+
+.practice-step--numbers .practice-step__text {
+  margin-left: calc(44% + 20px);
+}
+
+.practice-step--process .practice-step__bar {
+  left: 0;
+  width: 44%;
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.practice-step--process .practice-step__text {
+  margin-left: calc(44% + 20px);
+}
+
+.practice-step--launch .practice-step__bar {
+  right: 0;
+  width: 57%;
+  background: #f8bf12;
+}
+
+.practice-step--launch .practice-step__text {
+  position: absolute;
+  inset: 0 calc(57% + 20px) 0 0;
+  justify-content: flex-end;
+}
+
+@media (max-width: 980px) {
+  .about-losses {
+    padding: 68px 0 76px;
+  }
+
+  .about-losses__head {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    width: 100%;
+  }
+
+  .about-losses__title {
+    font-size: clamp(28px, 4.7vw, 35px);
+  }
+
+  .about-losses__lead {
+    max-width: 620px;
+    margin-top: 0;
+  }
+
+  .about-approach {
+    margin-top: 82px;
+  }
+
+  .about-practices {
+    margin-top: 82px;
+  }
+
+  .about-practices__title {
+    font-size: clamp(28px, 4.7vw, 35px);
+  }
+
+  .about-practices__logos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .about-approach__title {
+    font-size: clamp(28px, 4.7vw, 35px);
+  }
+
+  .about-approach__grid {
+    gap: 14px;
+  }
+
+  .about-approach-card h3 {
+    font-size: 20px;
+  }
+
+  .about-approach-tags li {
+    white-space: normal;
+  }
+
+  .losses-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 170px;
+    width: 100%;
+  }
+
+  .loss-card--check,
+  .loss-card--clock,
+  .loss-card--team {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-losses {
+    padding: 52px 0 62px;
+  }
+
+  .about-losses__title {
+    font-size: clamp(24px, 7.8vw, 31px);
+    line-height: 1.14;
+    letter-spacing: 0.035em;
+  }
+
+  .about-losses__title br,
+  .about-losses__lead br,
+  .about-approach__title br,
+  .about-approach__lead br,
+  .about-practices__title br,
+  .about-practices__lead br {
+    display: none;
+  }
+
+  .about-approach {
+    margin-top: 68px;
+  }
+
+  .about-practices {
+    margin-top: 68px;
+  }
+
+  .about-practices__head {
+    text-align: left;
+  }
+
+  .about-practices__title {
+    font-size: clamp(24px, 7.8vw, 31px);
+    line-height: 1.14;
+    letter-spacing: 0.035em;
+  }
+
+  .about-practices__lead {
+    font-size: 15px;
+    line-height: 1.44;
+  }
+
+  .about-practices__logos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 28px;
+  }
+
+  .about-practice-logo {
+    min-height: 68px;
+    border-radius: 14px;
+  }
+
+  .about-practices__steps {
+    gap: 8px;
+    margin-top: 28px;
+  }
+
+  .practice-step {
+    min-height: 54px;
+  }
+
+  .practice-step__text {
+    min-height: 54px;
+    font-size: 13px;
+    white-space: normal;
+  }
+
+  .practice-step--talk .practice-step__bar,
+  .practice-step--numbers .practice-step__bar,
+  .practice-step--process .practice-step__bar,
+  .practice-step--launch .practice-step__bar {
+    left: 0;
+    right: auto;
+    width: 38%;
+  }
+
+  .practice-step--talk .practice-step__text,
+  .practice-step--numbers .practice-step__text,
+  .practice-step--process .practice-step__text {
+    margin-left: calc(38% + 14px);
+    padding-right: 14px;
+  }
+
+  .practice-step--launch .practice-step__text {
+    position: relative;
+    inset: auto;
+    justify-content: flex-start;
+    margin-left: calc(38% + 14px);
+    padding-right: 14px;
+  }
+
+  .about-approach__head {
+    text-align: left;
+  }
+
+  .about-approach__title {
+    font-size: clamp(24px, 7.8vw, 31px);
+    line-height: 1.14;
+    letter-spacing: 0.035em;
+  }
+
+  .about-approach__lead {
+    font-size: 15px;
+    line-height: 1.44;
+  }
+
+  .about-approach__grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+  .about-approach-card {
+    min-height: 0;
+    padding: 22px;
+  }
+
+  .about-approach-card h3 {
+    margin-top: 26px;
+    font-size: 19px;
+  }
+
+  .about-approach-tags {
+    gap: 8px;
+  }
+
+  .about-approach-tags li {
+    min-height: 34px;
+    padding-inline: 16px;
+    font-size: 11px;
+    white-space: normal;
+  }
+
+  .losses-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(156px, auto);
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+  .loss-card,
+  .loss-card--check,
+  .loss-card--clock,
+  .loss-card--team {
+    grid-column: auto;
+    min-height: 156px;
+    padding: 22px;
+  }
+
+  .loss-card--image {
+    min-height: 210px;
+  }
+
+  .loss-card__image {
+    opacity: 0.92;
+  }
+
+  .loss-card p {
+    max-width: 72%;
+    font-size: 14px;
+  }
+}
