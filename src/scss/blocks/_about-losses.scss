@@ -10,10 +10,6 @@
     linear-gradient(116deg, #3c4a51 0%, #20262a 47%, #393b41 100%);
 }
 
-.about-losses__container {
-  width: calc(100% - var(--gutter) * 2);
-  max-width: none;
-}
 
 .about-losses__head {
   display: grid;
