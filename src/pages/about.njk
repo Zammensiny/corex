@@ -6,5 +6,11 @@
 {% block content %}
   {% include "sections/company-hero.njk" %}
   {% include "sections/about-origin.njk" %}
-  {% include "partials/footer.njk" %}
+  <div class="delivery-flow delivery-flow--about" id="about-flow" data-cms-block="about-flow">
+    {% include "sections/about-team.njk" %}
+    {% include "sections/fit.njk" %}
+    {% include "sections/support.njk" %}
+    {% include "sections/contact.njk" %}
+    {% include "partials/footer.njk" %}
+  </div>
 {% endblock %}
