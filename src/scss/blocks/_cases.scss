@@ -47,8 +47,8 @@
 .cases-tabs {
   display: flex;
   gap: 8px;
-  max-width: 1070px;
-  margin: 46px auto 0;
+  width: 100%;
+  margin: 46px 0 0;
   overflow-x: auto;
   padding-bottom: 2px;
   scrollbar-width: none;
@@ -59,9 +59,9 @@
 }
 
 .cases-tabs__button {
-  flex: 1 0 92px;
+  flex: 1 0 86px;
   min-height: 45px;
-  padding: 0 18px;
+  padding: 0 14px;
   border: 0;
   border-radius: 9px;
   color: rgba(37, 43, 48, 0.44);
@@ -108,8 +108,8 @@
 }
 
 .cases-panels {
-  max-width: 1070px;
-  margin: 56px auto 0;
+  width: 100%;
+  margin: 56px 0 0;
 }
 
 .case-panel[hidden] {
@@ -118,7 +118,7 @@
 
 .case-panel__headline {
   display: grid;
-  grid-template-columns: 238px minmax(0, 1fr);
+  grid-template-columns: 252px minmax(0, 1fr);
   gap: 24px;
   align-items: center;
   margin-bottom: 42px;
@@ -199,6 +199,147 @@
   letter-spacing: 0.008em;
 }
 
+.case-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.case-gallery__item {
+  position: relative;
+  display: block;
+  min-height: 146px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 18px;
+  background: rgba(37, 43, 48, 0.1);
+  box-shadow: 0 24px 58px rgba(35, 42, 47, 0.045);
+  cursor: pointer;
+  padding: 0;
+}
+
+.case-gallery__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 146px;
+  object-fit: cover;
+  transition: transform 0.24s ease;
+}
+
+.case-gallery__item:hover .case-gallery__image,
+.case-gallery__item:focus-visible .case-gallery__image {
+  transform: scale(1.035);
+}
+
+.case-gallery__item:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.case-gallery__zoom {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 14px 30px rgba(52, 123, 233, 0.25);
+}
+
+.case-gallery__zoom img {
+  width: 15px;
+  height: 15px;
+  filter: brightness(0) invert(1);
+}
+
+.case-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 28px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s ease;
+}
+
+.case-lightbox.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.case-lightbox__overlay {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(20, 25, 28, 0.72);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+
+.case-lightbox__dialog {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  max-width: min(1040px, 92vw);
+  max-height: 86vh;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #f3f3f1;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
+}
+
+.case-lightbox__image {
+  display: block;
+  width: 100%;
+  max-height: 86vh;
+  object-fit: contain;
+}
+
+.case-lightbox__close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(28, 33, 36, 0.82);
+  cursor: pointer;
+}
+
+.case-lightbox__close::before,
+.case-lightbox__close::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: #ffffff;
+}
+
+.case-lightbox__close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.case-lightbox__close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+body.is-case-lightbox-open {
+  overflow: hidden;
+}
+
 @media (max-width: 980px) {
   .cases {
     padding: 62px 0 72px;
@@ -207,11 +348,6 @@
 
   .cases__title {
     font-size: clamp(30px, 4.9vw, 38px);
-  }
-
-  .cases-tabs,
-  .cases-panels {
-    max-width: none;
   }
 
   .case-panel__headline {
@@ -240,7 +376,7 @@
   }
 
   .cases__container {
-    width: min(100% - 32px, 520px);
+    width: calc(100% - 32px);
   }
 
   .cases__header {
@@ -315,5 +451,23 @@
 
   .case-card p {
     font-size: 14px;
+  }
+
+  .case-gallery {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .case-gallery__item,
+  .case-gallery__image {
+    min-height: 180px;
+  }
+
+  .case-lightbox {
+    padding: 16px;
+  }
+
+  .case-lightbox__dialog {
+    border-radius: 18px;
   }
 }

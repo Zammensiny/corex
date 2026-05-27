@@ -26,7 +26,7 @@
 
     <nav class="main-nav" id="main-nav" aria-label="Основная навигация" data-cms-field="menu">
       <a href="about.html">О нас</a>
-      <a class="is-active" href="ai.html">ИИ-инструменты</a>
+      <a href="ai.html">ИИ-инструменты</a>
       <a class="main-nav__phone" href="tel:+74951203802">+7 495 120 38 02</a>
     </nav>
 
@@ -368,15 +368,15 @@
     </header>
 
     <div class="cases-tabs" role="tablist" aria-label="Кейсы">
-      <button class="cases-tabs__button is-active" type="button" role="tab" id="case-tab-1" aria-controls="case-panel-1" aria-selected="true" data-case-tab="1">Кейс №1</button>
-      <button class="cases-tabs__button" type="button" role="tab" id="case-tab-2" aria-controls="case-panel-2" aria-selected="false" data-case-tab="2">Кейс №2</button>
-      <button class="cases-tabs__button" type="button" role="tab" id="case-tab-3" aria-controls="case-panel-3" aria-selected="false" data-case-tab="3">Кейс №3</button>
-      <button class="cases-tabs__button" type="button" role="tab" id="case-tab-4" aria-controls="case-panel-4" aria-selected="false" data-case-tab="4">Кейс №4</button>
-      <button class="cases-tabs__button is-locked" type="button" role="tab" aria-selected="false" aria-disabled="true" disabled>Кейс №5</button>
-      <button class="cases-tabs__button is-locked" type="button" role="tab" aria-selected="false" aria-disabled="true" disabled>Кейс №6</button>
-      <button class="cases-tabs__button is-locked" type="button" role="tab" aria-selected="false" aria-disabled="true" disabled>Кейс №7</button>
-      <button class="cases-tabs__button is-locked" type="button" role="tab" aria-selected="false" aria-disabled="true" disabled>Кейс №8</button>
-      <button class="cases-tabs__button is-locked" type="button" role="tab" aria-selected="false" aria-disabled="true" disabled>Кейс №9</button>
+      <button class="cases-tabs__button is-active" type="button" role="tab" id="case-tab-1" aria-controls="case-panel-1" aria-selected="true" tabindex="0" data-case-tab="1">Кейс №1</button>
+      <button class="cases-tabs__button" type="button" role="tab" id="case-tab-2" aria-controls="case-panel-2" aria-selected="false" tabindex="-1" data-case-tab="2">Кейс №2</button>
+      <button class="cases-tabs__button" type="button" role="tab" id="case-tab-3" aria-controls="case-panel-3" aria-selected="false" tabindex="-1" data-case-tab="3">Кейс №3</button>
+      <button class="cases-tabs__button" type="button" role="tab" id="case-tab-4" aria-controls="case-panel-4" aria-selected="false" tabindex="-1" data-case-tab="4">Кейс №4</button>
+      <button class="cases-tabs__button" type="button" role="tab" id="case-tab-5" aria-controls="case-panel-5" aria-selected="false" tabindex="-1" data-case-tab="5">Кейс №5</button>
+      <button class="cases-tabs__button" type="button" role="tab" id="case-tab-6" aria-controls="case-panel-6" aria-selected="false" tabindex="-1" data-case-tab="6">Кейс №6</button>
+      <button class="cases-tabs__button" type="button" role="tab" id="case-tab-7" aria-controls="case-panel-7" aria-selected="false" tabindex="-1" data-case-tab="7">Кейс №7</button>
+      <button class="cases-tabs__button" type="button" role="tab" id="case-tab-8" aria-controls="case-panel-8" aria-selected="false" tabindex="-1" data-case-tab="8">Кейс №8</button>
+      <button class="cases-tabs__button" type="button" role="tab" id="case-tab-9" aria-controls="case-panel-9" aria-selected="false" tabindex="-1" data-case-tab="9">Кейс №9</button>
       <button class="cases-tabs__button cases-tabs__button--soon is-locked" type="button" role="tab" aria-selected="false" aria-disabled="true" disabled>Скоро</button>
     </div>
 
@@ -384,7 +384,7 @@
       <article class="case-panel is-active" id="case-panel-1" role="tabpanel" aria-labelledby="case-tab-1" data-case-panel="1">
         <div class="case-panel__headline">
           <span class="case-panel__tag">Biometric time tracking</span>
-          <h3>Контроль рабочего времени без ошибок,<br>потери и «человеческого фактора»</h3>
+          <h3>Контроль рабочего времени без ошибок,<br>потерь и «человеческого фактора»</h3>
         </div>
 
         <div class="case-panel__grid">
@@ -422,133 +422,567 @@
             <h4>Как итог:</h4>
             <p>Система стала частью операционной инфраструктуры бизнеса. Не просто контроль времени — управляемость процессами через данные.</p>
           </div>
+
+        </div>
+
+        <div class="case-gallery" aria-label="Изображения кейса">
+          <button class="case-gallery__item" type="button" data-case-lightbox-open data-lightbox-src="assets/img/services-custom.png" aria-label="Открыть изображение кейса 1.1">
+            <img class="case-gallery__image" src="assets/img/services-custom.png" alt="Демо-изображение кейса 1.1" loading="lazy">
+            <span class="case-gallery__zoom" aria-hidden="true">
+              <img src="assets/icons/problem-chart-line.svg" width="15" height="15" alt="">
+            </span>
+          </button>
+          <button class="case-gallery__item" type="button" data-case-lightbox-open data-lightbox-src="assets/img/hero-card-mvp.png" aria-label="Открыть изображение кейса 1.2">
+            <img class="case-gallery__image" src="assets/img/hero-card-mvp.png" alt="Демо-изображение кейса 1.2" loading="lazy">
+            <span class="case-gallery__zoom" aria-hidden="true">
+              <img src="assets/icons/problem-chart-line.svg" width="15" height="15" alt="">
+            </span>
+          </button>
+          <button class="case-gallery__item" type="button" data-case-lightbox-open data-lightbox-src="assets/img/about-losses-clock.png" aria-label="Открыть изображение кейса 1.3">
+            <img class="case-gallery__image" src="assets/img/about-losses-clock.png" alt="Демо-изображение кейса 1.3" loading="lazy">
+            <span class="case-gallery__zoom" aria-hidden="true">
+              <img src="assets/icons/problem-chart-line.svg" width="15" height="15" alt="">
+            </span>
+          </button>
         </div>
       </article>
 
       <article class="case-panel" id="case-panel-2" role="tabpanel" aria-labelledby="case-tab-2" data-case-panel="2" hidden>
         <div class="case-panel__headline">
-          <span class="case-panel__tag">Internal CRM</span>
-          <h3>CRM для продаж, где заявки не теряются<br>и менеджеры работают по одному сценарию</h3>
+          <span class="case-panel__tag">TMG ERP</span>
+          <h3>Прозрачное управление инженерной компанией<br>без ручного контроля и «приписок»</h3>
         </div>
 
         <div class="case-panel__grid">
           <div class="case-card">
-            <h4>Проблема была в хаосе:</h4>
+            <h4>Компания теряла эффективность из-за:</h4>
             <ul>
-              <li>Заявки жили в разных таблицах и чатах</li>
-              <li>Не было единого статуса сделки</li>
-              <li>Руководитель видел картину с задержкой</li>
+              <li>Отсутствия единой системы по филиалам и отделам</li>
+              <li>Ручного учёта времени и ошибок в отчётности</li>
+              <li>«Buddy punching» и фиктивных отметок сотрудников</li>
+              <li>Непрозрачной загрузки выездных бригад и подрядчиков</li>
             </ul>
           </div>
 
           <div class="case-card">
-            <h4>Что собрали:</h4>
+            <h4>Разработали отраслевую ERP-систему для инженерных компаний:</h4>
             <ul>
-              <li>Единую воронку заявок и сделок</li>
-              <li>Роли, права и сценарии работы</li>
-              <li>Интеграции с телефонией и формами</li>
-              <li>Отчёты по этапам и менеджерам</li>
+              <li>Биометрическая идентификация сотрудников через AI face-ID</li>
+              <li>Гео-верификация отметок для выездных сотрудников</li>
+              <li>Единая система проектов, задач, списаний и отчётности</li>
+              <li>Централизованное управление филиалами и HR-контуром</li>
             </ul>
           </div>
 
           <div class="case-card">
             <h4>Результат:</h4>
             <ul>
-              <li>Снизили потери лидов</li>
-              <li>Ускорили обработку обращений</li>
-              <li>Сделали прозрачной загрузку отдела</li>
+              <li>Исключены ошибки и манипуляции с учётом времени</li>
+              <li>Руководство видит загрузку сотрудников в реальном времени</li>
+              <li>Ускорен контроль проектов, задач и списаний</li>
+              <li>Все филиалы работают в едином цифровом контуре</li>
             </ul>
           </div>
 
           <div class="case-card case-card--accent">
             <h4>Как итог:</h4>
-            <p>CRM стала не складом карточек, а рабочим инструментом управления продажами и качеством обработки заявок.</p>
+            <p>Система стала единым операционным центром компании. Не просто ERP — инструмент управления людьми, проектами и дисциплиной через данные.</p>
           </div>
+
+        </div>
+
+        <div class="case-gallery" aria-label="Изображения кейса">
+          <button class="case-gallery__item" type="button" data-case-lightbox-open data-lightbox-src="assets/img/services-products.png" aria-label="Открыть изображение кейса 2.1">
+            <img class="case-gallery__image" src="assets/img/services-products.png" alt="Демо-изображение кейса 2.1" loading="lazy">
+            <span class="case-gallery__zoom" aria-hidden="true">
+              <img src="assets/icons/problem-chart-line.svg" width="15" height="15" alt="">
+            </span>
+          </button>
+          <button class="case-gallery__item" type="button" data-case-lightbox-open data-lightbox-src="assets/img/about-audience-team.png" aria-label="Открыть изображение кейса 2.2">
+            <img class="case-gallery__image" src="assets/img/about-audience-team.png" alt="Демо-изображение кейса 2.2" loading="lazy">
+            <span class="case-gallery__zoom" aria-hidden="true">
+              <img src="assets/icons/problem-chart-line.svg" width="15" height="15" alt="">
+            </span>
+          </button>
+          <button class="case-gallery__item" type="button" data-case-lightbox-open data-lightbox-src="assets/img/hero-card-gear.png" aria-label="Открыть изображение кейса 2.3">
+            <img class="case-gallery__image" src="assets/img/hero-card-gear.png" alt="Демо-изображение кейса 2.3" loading="lazy">
+            <span class="case-gallery__zoom" aria-hidden="true">
+              <img src="assets/icons/problem-chart-line.svg" width="15" height="15" alt="">
+            </span>
+          </button>
         </div>
       </article>
 
       <article class="case-panel" id="case-panel-3" role="tabpanel" aria-labelledby="case-tab-3" data-case-panel="3" hidden>
         <div class="case-panel__headline">
-          <span class="case-panel__tag">ERP module</span>
-          <h3>Учёт операций и ресурсов без ручного<br>дублирования данных между отделами</h3>
+          <span class="case-panel__tag">RAG system</span>
+          <h3>ИИ-ассистент, который отвечает по документам<br>компании, а не «гадает»</h3>
         </div>
 
         <div class="case-panel__grid">
           <div class="case-card">
-            <h4>Что мешало масштабироваться:</h4>
+            <h4>Компания сталкивалась с проблемами:</h4>
             <ul>
-              <li>Данные расходились между отделами</li>
-              <li>Часть операций вели вручную</li>
-              <li>Отчёты собирались слишком долго</li>
+              <li>Сотрудники тратили время на поиск информации в документах</li>
+              <li>Ответы поддержки и менеджеров отличались друг от друга</li>
+              <li>GPT давал неточные ответы без опоры на реальные данные</li>
+              <li>Базы знаний, инструкции и регламенты были разрознены</li>
             </ul>
           </div>
 
           <div class="case-card">
-            <h4>Решение:</h4>
+            <h4>Разработали RAG-систему для работы с корпоративными данными:</h4>
             <ul>
-              <li>Спроектировали модульную структуру</li>
-              <li>Связали ключевые процессы</li>
-              <li>Настроили роли и контроль статусов</li>
-              <li>Вывели управленческую аналитику</li>
+              <li>AI-ассистент ищет ответы по документам компании</li>
+              <li>Интеграция с договорами, регламентами, FAQ и базами знаний</li>
+              <li>Поиск релевантных фрагментов через векторную индексацию</li>
+              <li>Возможность создавать отдельные проекты и хранилища под разные задачи</li>
             </ul>
           </div>
 
           <div class="case-card">
             <h4>Результат:</h4>
             <ul>
-              <li>Меньше ручного труда</li>
-              <li>Быстрее согласования и отчётность</li>
-              <li>Единая картина для руководства</li>
+              <li>Сотрудники и клиенты получают точные ответы за секунды</li>
+              <li>Снижена нагрузка на поддержку и внутренние команды</li>
+              <li>Исключены ошибки из-за устаревшей или неверной информации</li>
+              <li>Вся база знаний стала доступна через единый AI-интерфейс</li>
             </ul>
           </div>
 
           <div class="case-card case-card--accent">
             <h4>Как итог:</h4>
-            <p>Система перестала быть набором разрозненных инструментов и стала общей логикой работы компании.</p>
+            <p>Система превратила документы компании в работающего AI-сотрудника. Не просто чат-бот — интеллектуальный слой поверх корпоративных знаний и бизнес-процессов.</p>
           </div>
+
+        </div>
+
+        <div class="case-gallery" aria-label="Изображения кейса">
+          <button class="case-gallery__item" type="button" data-case-lightbox-open data-lightbox-src="assets/img/services-ai.png" aria-label="Открыть изображение кейса 3.1">
+            <img class="case-gallery__image" src="assets/img/services-ai.png" alt="Демо-изображение кейса 3.1" loading="lazy">
+            <span class="case-gallery__zoom" aria-hidden="true">
+              <img src="assets/icons/problem-chart-line.svg" width="15" height="15" alt="">
+            </span>
+          </button>
+          <button class="case-gallery__item" type="button" data-case-lightbox-open data-lightbox-src="assets/img/hero-card-html.png" aria-label="Открыть изображение кейса 3.2">
+            <img class="case-gallery__image" src="assets/img/hero-card-html.png" alt="Демо-изображение кейса 3.2" loading="lazy">
+            <span class="case-gallery__zoom" aria-hidden="true">
+              <img src="assets/icons/problem-chart-line.svg" width="15" height="15" alt="">
+            </span>
+          </button>
+          <button class="case-gallery__item" type="button" data-case-lightbox-open data-lightbox-src="assets/img/about-audience-franchise.png" aria-label="Открыть изображение кейса 3.3">
+            <img class="case-gallery__image" src="assets/img/about-audience-franchise.png" alt="Демо-изображение кейса 3.3" loading="lazy">
+            <span class="case-gallery__zoom" aria-hidden="true">
+              <img src="assets/icons/problem-chart-line.svg" width="15" height="15" alt="">
+            </span>
+          </button>
         </div>
       </article>
 
       <article class="case-panel" id="case-panel-4" role="tabpanel" aria-labelledby="case-tab-4" data-case-panel="4" hidden>
         <div class="case-panel__headline">
-          <span class="case-panel__tag">AI assistant</span>
-          <h3>ИИ-помощник для обработки запросов<br>и снижения нагрузки на команду</h3>
+          <span class="case-panel__tag">AI auditor</span>
+          <h3>Контроль и улучшение продаж через анализ<br>звонков, а не ручное прослушивание</h3>
         </div>
 
         <div class="case-panel__grid">
           <div class="case-card">
-            <h4>До внедрения:</h4>
+            <h4>Отдел продаж терял эффективность из-за:</h4>
             <ul>
-              <li>Повторяющиеся вопросы забирали время</li>
-              <li>Ответы зависели от конкретного сотрудника</li>
-              <li>Новые заявки обрабатывались с задержкой</li>
+              <li>Ручного контроля и выборочного прослушивания звонков</li>
+              <li>Отсутствия единого рабочего скрипта продаж</li>
+              <li>Разного качества диалогов между менеджерами</li>
+              <li>Потери клиентов на этапах возражений и следующего шага</li>
             </ul>
           </div>
 
           <div class="case-card">
-            <h4>Что сделали:</h4>
+            <h4>Разработали AI-систему анализа звонков:</h4>
             <ul>
-              <li>Собрали базу знаний и сценарии ответов</li>
-              <li>Настроили маршрутизацию сложных запросов</li>
-              <li>Подключили аналитику частых обращений</li>
+              <li>Автоматическая расшифровка и оценка разговоров</li>
+              <li>Проверка звонков по критериям и этапам сценария</li>
+              <li>Подсказки менеджеру по улучшению диалога</li>
+              <li>Единая база звонков для контроля и обучения команды</li>
             </ul>
           </div>
 
           <div class="case-card">
             <h4>Результат:</h4>
             <ul>
-              <li>Сократили время первичной реакции</li>
-              <li>Освободили команду от рутины</li>
-              <li>Сохранили контроль сложных кейсов</li>
+              <li>Руководитель получает прозрачную картину по звонкам</li>
+              <li>Менеджеры быстрее выходят на качественный диалог</li>
+              <li>Снижена ручная роль отдела продаж</li>
+              <li>Скрипты стали понятнее, живее и эффективнее</li>
             </ul>
           </div>
 
           <div class="case-card case-card--accent">
             <h4>Как итог:</h4>
-            <p>ИИ стал частью процесса, а не отдельной игрушкой: команда быстрее отвечает и видит, где возникают повторяющиеся проблемы.</p>
+            <p>Система стала инструментом развития отдела продаж, а не тотального контроля. Не просто анализ звонков — AI-помощник для роста качества коммуникации и конверсии команды.</p>
           </div>
+
+        </div>
+
+        <div class="case-gallery" aria-label="Изображения кейса">
+          <button class="case-gallery__item" type="button" data-case-lightbox-open data-lightbox-src="assets/img/about-audience-call.png" aria-label="Открыть изображение кейса 4.1">
+            <img class="case-gallery__image" src="assets/img/about-audience-call.png" alt="Демо-изображение кейса 4.1" loading="lazy">
+            <span class="case-gallery__zoom" aria-hidden="true">
+              <img src="assets/icons/problem-chart-line.svg" width="15" height="15" alt="">
+            </span>
+          </button>
+          <button class="case-gallery__item" type="button" data-case-lightbox-open data-lightbox-src="assets/img/about-losses-team.png" aria-label="Открыть изображение кейса 4.2">
+            <img class="case-gallery__image" src="assets/img/about-losses-team.png" alt="Демо-изображение кейса 4.2" loading="lazy">
+            <span class="case-gallery__zoom" aria-hidden="true">
+              <img src="assets/icons/problem-chart-line.svg" width="15" height="15" alt="">
+            </span>
+          </button>
+          <button class="case-gallery__item" type="button" data-case-lightbox-open data-lightbox-src="assets/img/services-cloud.png" aria-label="Открыть изображение кейса 4.3">
+            <img class="case-gallery__image" src="assets/img/services-cloud.png" alt="Демо-изображение кейса 4.3" loading="lazy">
+            <span class="case-gallery__zoom" aria-hidden="true">
+              <img src="assets/icons/problem-chart-line.svg" width="15" height="15" alt="">
+            </span>
+          </button>
         </div>
       </article>
+
+      <article class="case-panel" id="case-panel-5" role="tabpanel" aria-labelledby="case-tab-5" data-case-panel="5" hidden>
+        <div class="case-panel__headline">
+          <span class="case-panel__tag">Corporate ChatGPT</span>
+          <h3>Корпоративный AI-ассистент для работы с<br>документами, файлами и внутренними данными</h3>
+        </div>
+
+        <div class="case-panel__grid">
+          <div class="case-card">
+            <h4>Компания сталкивалась с проблемами:</h4>
+            <ul>
+              <li>Сотрудники тратили время на поиск информации в источниках</li>
+              <li>Внутренние знания были разбросаны между файлами и отделами</li>
+              <li>Обычный ChatGPT не учитывал специфику компании и внутренние данные</li>
+              <li>Возникали риски при использовании публичных AI-сервисов для рабочих задач</li>
+            </ul>
+          </div>
+
+          <div class="case-card">
+            <h4>Разработали корпоративный аналог ChatGPT:</h4>
+            <ul>
+              <li>AI-ассистент в закрытом корпоративном контуре</li>
+              <li>Работа с PDF, Word, Excel и внутренними документами</li>
+              <li>Поиск и анализ информации по корпоративной базе знаний</li>
+              <li>Интеграция AI в ежедневные процессы сотрудников</li>
+            </ul>
+          </div>
+
+          <div class="case-card">
+            <h4>Результат:</h4>
+            <ul>
+              <li>Сотрудники быстрее находят нужную информацию</li>
+              <li>Снижена нагрузка на внутренние команды поддержки</li>
+              <li>Ускорена работа с документами и корпоративными данными</li>
+              <li>Компания получила безопасный AI-инструмент для внутренних процессов</li>
+            </ul>
+          </div>
+
+          <div class="case-card case-card--accent">
+            <h4>Как итог:</h4>
+            <p>Система стала единым AI-интерфейсом для работы с корпоративными знаниями. Не просто ChatGPT — корпоративный интеллектуальный помощник для бизнеса и сотрудников.</p>
+          </div>
+
+        </div>
+
+        <div class="case-gallery" aria-label="Изображения кейса">
+          <button class="case-gallery__item" type="button" data-case-lightbox-open data-lightbox-src="assets/img/about-losses-check.png" aria-label="Открыть изображение кейса 5.1">
+            <img class="case-gallery__image" src="assets/img/about-losses-check.png" alt="Демо-изображение кейса 5.1" loading="lazy">
+            <span class="case-gallery__zoom" aria-hidden="true">
+              <img src="assets/icons/problem-chart-line.svg" width="15" height="15" alt="">
+            </span>
+          </button>
+          <button class="case-gallery__item" type="button" data-case-lightbox-open data-lightbox-src="assets/img/services-ai.png" aria-label="Открыть изображение кейса 5.2">
+            <img class="case-gallery__image" src="assets/img/services-ai.png" alt="Демо-изображение кейса 5.2" loading="lazy">
+            <span class="case-gallery__zoom" aria-hidden="true">
+              <img src="assets/icons/problem-chart-line.svg" width="15" height="15" alt="">
+            </span>
+          </button>
+          <button class="case-gallery__item" type="button" data-case-lightbox-open data-lightbox-src="assets/img/about-audience-b2b.png" aria-label="Открыть изображение кейса 5.3">
+            <img class="case-gallery__image" src="assets/img/about-audience-b2b.png" alt="Демо-изображение кейса 5.3" loading="lazy">
+            <span class="case-gallery__zoom" aria-hidden="true">
+              <img src="assets/icons/problem-chart-line.svg" width="15" height="15" alt="">
+            </span>
+          </button>
+        </div>
+      </article>
+
+      <article class="case-panel" id="case-panel-6" role="tabpanel" aria-labelledby="case-tab-6" data-case-panel="6" hidden>
+        <div class="case-panel__headline">
+          <span class="case-panel__tag">Administrative time management</span>
+          <h3>Цифровой контроль рабочего времени<br>и дисциплины без таблиц и ручного учёта</h3>
+        </div>
+
+        <div class="case-panel__grid">
+          <div class="case-card">
+            <h4>Компания сталкивалась с проблемами:</h4>
+            <ul>
+              <li>Отсутствие прозрачного контроля рабочего времени</li>
+              <li>Ручной учёт посещаемости и переработок</li>
+              <li>Ошибки и потери времени из-за человеческого фактора</li>
+              <li>Сложность контроля сотрудников между филиалами и отделами</li>
+            </ul>
+          </div>
+
+          <div class="case-card">
+            <h4>Разработали систему административного учёта времени:</h4>
+            <ul>
+              <li>Учёт рабочего времени и активности сотрудников</li>
+              <li>Централизованный контроль посещаемости и дисциплины</li>
+              <li>Единая система аналитики по отделам и филиалам</li>
+              <li>Автоматизация отчётности и административных процессов</li>
+            </ul>
+          </div>
+
+          <div class="case-card">
+            <h4>Результат:</h4>
+            <ul>
+              <li>Руководство получило прозрачную картину занятости сотрудников</li>
+              <li>Снижено количество ошибок в учёте времени</li>
+              <li>Ускорена работа HR и административного отдела</li>
+              <li>Контроль рабочего времени стал полностью цифровым</li>
+            </ul>
+          </div>
+
+          <div class="case-card case-card--accent">
+            <h4>Как итог:</h4>
+            <p>Система стала единым инструментом управления дисциплиной и административными процессами. Не просто тайм-трекер — цифровая инфраструктура контроля эффективности компании.</p>
+          </div>
+
+        </div>
+
+        <div class="case-gallery" aria-label="Изображения кейса">
+          <button class="case-gallery__item" type="button" data-case-lightbox-open data-lightbox-src="assets/img/about-losses-clock.png" aria-label="Открыть изображение кейса 6.1">
+            <img class="case-gallery__image" src="assets/img/about-losses-clock.png" alt="Демо-изображение кейса 6.1" loading="lazy">
+            <span class="case-gallery__zoom" aria-hidden="true">
+              <img src="assets/icons/problem-chart-line.svg" width="15" height="15" alt="">
+            </span>
+          </button>
+          <button class="case-gallery__item" type="button" data-case-lightbox-open data-lightbox-src="assets/img/services-custom.png" aria-label="Открыть изображение кейса 6.2">
+            <img class="case-gallery__image" src="assets/img/services-custom.png" alt="Демо-изображение кейса 6.2" loading="lazy">
+            <span class="case-gallery__zoom" aria-hidden="true">
+              <img src="assets/icons/problem-chart-line.svg" width="15" height="15" alt="">
+            </span>
+          </button>
+          <button class="case-gallery__item" type="button" data-case-lightbox-open data-lightbox-src="assets/img/hero-card-html.png" aria-label="Открыть изображение кейса 6.3">
+            <img class="case-gallery__image" src="assets/img/hero-card-html.png" alt="Демо-изображение кейса 6.3" loading="lazy">
+            <span class="case-gallery__zoom" aria-hidden="true">
+              <img src="assets/icons/problem-chart-line.svg" width="15" height="15" alt="">
+            </span>
+          </button>
+        </div>
+      </article>
+
+      <article class="case-panel" id="case-panel-7" role="tabpanel" aria-labelledby="case-tab-7" data-case-panel="7" hidden>
+        <div class="case-panel__headline">
+          <span class="case-panel__tag">Audience engagement analytics</span>
+          <h3>Аналитика вовлечённости аудитории<br>для событий, контента и digital-платформ</h3>
+        </div>
+
+        <div class="case-panel__grid">
+          <div class="case-card">
+            <h4>Компания сталкивалась с проблемами:</h4>
+            <ul>
+              <li>Не было прозрачного понимания вовлечённости аудитории</li>
+              <li>Сложно оценивать интерес к контенту и активностям</li>
+              <li>Данные собирались из разных источников вручную</li>
+              <li>Руководство не видело полную картину поведения пользователей</li>
+            </ul>
+          </div>
+
+          <div class="case-card">
+            <h4>Разработали систему аналитики вовлечённости:</h4>
+            <ul>
+              <li>Сбор и анализ действий аудитории в едином интерфейсе</li>
+              <li>Отслеживание активности пользователей и ключевых событий</li>
+              <li>Визуальная аналитика по взаимодействию с контентом</li>
+              <li>Централизованная система метрик для оценки эффективности</li>
+            </ul>
+          </div>
+
+          <div class="case-card">
+            <h4>Результат:</h4>
+            <ul>
+              <li>Команда получила прозрачную аналитику по аудитории</li>
+              <li>Стало проще выявлять сильный и слабый контент</li>
+              <li>Снижено время на ручной анализ данных</li>
+              <li>Решения начали приниматься на основе реального поведения пользователей</li>
+            </ul>
+          </div>
+
+          <div class="case-card case-card--accent">
+            <h4>Как итог:</h4>
+            <p>Система стала единым центром аналитики пользовательской вовлечённости. Не просто отчёты — инструмент понимания аудитории и управления эффективностью digital-продуктов.</p>
+          </div>
+
+        </div>
+
+        <div class="case-gallery" aria-label="Изображения кейса">
+          <button class="case-gallery__item" type="button" data-case-lightbox-open data-lightbox-src="assets/img/about-audience-team.png" aria-label="Открыть изображение кейса 7.1">
+            <img class="case-gallery__image" src="assets/img/about-audience-team.png" alt="Демо-изображение кейса 7.1" loading="lazy">
+            <span class="case-gallery__zoom" aria-hidden="true">
+              <img src="assets/icons/problem-chart-line.svg" width="15" height="15" alt="">
+            </span>
+          </button>
+          <button class="case-gallery__item" type="button" data-case-lightbox-open data-lightbox-src="assets/img/about-losses-team.png" aria-label="Открыть изображение кейса 7.2">
+            <img class="case-gallery__image" src="assets/img/about-losses-team.png" alt="Демо-изображение кейса 7.2" loading="lazy">
+            <span class="case-gallery__zoom" aria-hidden="true">
+              <img src="assets/icons/problem-chart-line.svg" width="15" height="15" alt="">
+            </span>
+          </button>
+          <button class="case-gallery__item" type="button" data-case-lightbox-open data-lightbox-src="assets/img/services-products.png" aria-label="Открыть изображение кейса 7.3">
+            <img class="case-gallery__image" src="assets/img/services-products.png" alt="Демо-изображение кейса 7.3" loading="lazy">
+            <span class="case-gallery__zoom" aria-hidden="true">
+              <img src="assets/icons/problem-chart-line.svg" width="15" height="15" alt="">
+            </span>
+          </button>
+        </div>
+      </article>
+
+      <article class="case-panel" id="case-panel-8" role="tabpanel" aria-labelledby="case-tab-8" data-case-panel="8" hidden>
+        <div class="case-panel__headline">
+          <span class="case-panel__tag">Debt &amp; bankruptcy management</span>
+          <h3>Автоматизация процессов взыскания<br>и банкротства в единой системе</h3>
+        </div>
+
+        <div class="case-panel__grid">
+          <div class="case-card">
+            <h4>Компания сталкивалась с проблемами:</h4>
+            <ul>
+              <li>Разрозненное ведение дел и документов</li>
+              <li>Ручной контроль этапов взыскания и банкротства</li>
+              <li>Потеря информации между юристами и отделами</li>
+              <li>Сложность отслеживания сроков, статусов и загрузки команды</li>
+            </ul>
+          </div>
+
+          <div class="case-card">
+            <h4>Разработали систему управления процессами взыскания:</h4>
+            <ul>
+              <li>Единая платформа для ведения дел и клиентов</li>
+              <li>Контроль этапов банкротства и юридических процедур</li>
+              <li>Централизованное хранение документов и истории взаимодействий</li>
+              <li>Аналитика по загрузке сотрудников и статусам дел</li>
+            </ul>
+          </div>
+
+          <div class="case-card">
+            <h4>Результат:</h4>
+            <ul>
+              <li>Ускорена работа юристов и операционных команд</li>
+              <li>Снижено количество ошибок и потери информации</li>
+              <li>Руководство получило прозрачный контроль по всем процессам</li>
+              <li>Работа с делами стала системной и прогнозируемой</li>
+            </ul>
+          </div>
+
+          <div class="case-card case-card--accent">
+            <h4>Как итог:</h4>
+            <p>Система стала единым цифровым контуром для процессов взыскания и банкротства. Не просто CRM — инфраструктура управления юридическими процессами и контролем исполнения.</p>
+          </div>
+
+        </div>
+
+        <div class="case-gallery" aria-label="Изображения кейса">
+          <button class="case-gallery__item" type="button" data-case-lightbox-open data-lightbox-src="assets/img/services-cloud.png" aria-label="Открыть изображение кейса 8.1">
+            <img class="case-gallery__image" src="assets/img/services-cloud.png" alt="Демо-изображение кейса 8.1" loading="lazy">
+            <span class="case-gallery__zoom" aria-hidden="true">
+              <img src="assets/icons/problem-chart-line.svg" width="15" height="15" alt="">
+            </span>
+          </button>
+          <button class="case-gallery__item" type="button" data-case-lightbox-open data-lightbox-src="assets/img/hero-card-gear.png" aria-label="Открыть изображение кейса 8.2">
+            <img class="case-gallery__image" src="assets/img/hero-card-gear.png" alt="Демо-изображение кейса 8.2" loading="lazy">
+            <span class="case-gallery__zoom" aria-hidden="true">
+              <img src="assets/icons/problem-chart-line.svg" width="15" height="15" alt="">
+            </span>
+          </button>
+          <button class="case-gallery__item" type="button" data-case-lightbox-open data-lightbox-src="assets/img/about-audience-franchise.png" aria-label="Открыть изображение кейса 8.3">
+            <img class="case-gallery__image" src="assets/img/about-audience-franchise.png" alt="Демо-изображение кейса 8.3" loading="lazy">
+            <span class="case-gallery__zoom" aria-hidden="true">
+              <img src="assets/icons/problem-chart-line.svg" width="15" height="15" alt="">
+            </span>
+          </button>
+        </div>
+      </article>
+
+      <article class="case-panel" id="case-panel-9" role="tabpanel" aria-labelledby="case-tab-9" data-case-panel="9" hidden>
+        <div class="case-panel__headline">
+          <span class="case-panel__tag">Meeting documentation app</span>
+          <h3>Автоматизация протоколов и фиксации<br>договорённостей после встреч</h3>
+        </div>
+
+        <div class="case-panel__grid">
+          <div class="case-card">
+            <h4>Компания сталкивалась с проблемами:</h4>
+            <ul>
+              <li>Договорённости после встреч терялись или фиксировались вручную</li>
+              <li>Сотрудники по-разному вели протоколы и заметки</li>
+              <li>Руководство не видело прозрачного статуса задач совещаний</li>
+              <li>Подготовка итогов встреч занимала много времени</li>
+            </ul>
+          </div>
+
+          <div class="case-card">
+            <h4>Разработали AI-систему документирования встреч:</h4>
+            <ul>
+              <li>Автоматическая фиксация и структурирование договорённостей</li>
+              <li>Формирование протоколов и итогов совещаний</li>
+              <li>Выделение задач, ответственных и следующих шагов</li>
+              <li>Централизованное хранение истории встреч и решений</li>
+            </ul>
+          </div>
+
+          <div class="case-card">
+            <h4>Результат:</h4>
+            <ul>
+              <li>Снижено время на оформление итогов встреч</li>
+              <li>Команда перестала терять важные договорённости</li>
+              <li>Повысилась прозрачность исполнения задач</li>
+              <li>Руководители получили единый контур контроля коммуникаций</li>
+            </ul>
+          </div>
+
+          <div class="case-card case-card--accent">
+            <h4>Как итог:</h4>
+            <p>Система стала цифровым помощником для управления встречами и внутренними коммуникациями. Не просто заметки — инструмент фиксации решений, задач и ответственности внутри команды.</p>
+          </div>
+
+        </div>
+
+        <div class="case-gallery" aria-label="Изображения кейса">
+          <button class="case-gallery__item" type="button" data-case-lightbox-open data-lightbox-src="assets/img/hero-card-mvp.png" aria-label="Открыть изображение кейса 9.1">
+            <img class="case-gallery__image" src="assets/img/hero-card-mvp.png" alt="Демо-изображение кейса 9.1" loading="lazy">
+            <span class="case-gallery__zoom" aria-hidden="true">
+              <img src="assets/icons/problem-chart-line.svg" width="15" height="15" alt="">
+            </span>
+          </button>
+          <button class="case-gallery__item" type="button" data-case-lightbox-open data-lightbox-src="assets/img/services-products.png" aria-label="Открыть изображение кейса 9.2">
+            <img class="case-gallery__image" src="assets/img/services-products.png" alt="Демо-изображение кейса 9.2" loading="lazy">
+            <span class="case-gallery__zoom" aria-hidden="true">
+              <img src="assets/icons/problem-chart-line.svg" width="15" height="15" alt="">
+            </span>
+          </button>
+          <button class="case-gallery__item" type="button" data-case-lightbox-open data-lightbox-src="assets/img/about-losses-check.png" aria-label="Открыть изображение кейса 9.3">
+            <img class="case-gallery__image" src="assets/img/about-losses-check.png" alt="Демо-изображение кейса 9.3" loading="lazy">
+            <span class="case-gallery__zoom" aria-hidden="true">
+              <img src="assets/icons/problem-chart-line.svg" width="15" height="15" alt="">
+            </span>
+          </button>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <div class="case-lightbox" data-case-lightbox aria-hidden="true">
+    <button class="case-lightbox__overlay" type="button" data-case-lightbox-close aria-label="Закрыть изображение"></button>
+    <div class="case-lightbox__dialog" role="dialog" aria-modal="true" aria-label="Изображение кейса">
+      <button class="case-lightbox__close" type="button" data-case-lightbox-close aria-label="Закрыть изображение"></button>
+      <img class="case-lightbox__image" src="" alt="" data-case-lightbox-image>
     </div>
   </div>
 </section>
@@ -872,7 +1306,7 @@
 
     <nav class="site-footer__nav" aria-label="Навигация в подвале" data-cms-field="menu">
       <a href="about.html">О нас</a>
-      <a class="is-active" href="ai.html">ИИ-инструменты</a>
+      <a href="ai.html">ИИ-инструменты</a>
     </nav>
 
     <div class="site-footer__bottom" data-cms-field="legal">
@@ -904,7 +1338,7 @@
         <div class="menu-modal__left">
           <nav class="menu-modal__nav" aria-label="Полное меню" data-cms-field="menu">
             <a href="about.html" data-menu-modal-link>О нас</a>
-            <a class="is-current" href="ai.html" data-menu-modal-link>ИИ-инструменты</a>
+            <a href="ai.html" data-menu-modal-link>ИИ-инструменты</a>
           </nav>
 
           <div class="menu-modal__contacts" data-cms-field="contacts">

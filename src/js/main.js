@@ -129,6 +129,7 @@ document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
     setMenuState(false);
     setModalState(false);
+    document.querySelectorAll('[data-case-lightbox].is-open').forEach(closeCaseLightbox);
   }
 });
 
@@ -194,6 +195,56 @@ casesBlocks.forEach((casesBlock) => {
 
     tab.setAttribute('tabindex', index === 0 ? '0' : '-1');
   });
+});
+
+const caseLightboxes = document.querySelectorAll('[data-case-lightbox]');
+let caseLightboxLastFocused = null;
+
+const closeCaseLightbox = (lightbox) => {
+  if (!lightbox) return;
+
+  const image = lightbox.querySelector('[data-case-lightbox-image]');
+  lightbox.classList.remove('is-open');
+  lightbox.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('is-case-lightbox-open');
+
+  if (image) {
+    image.removeAttribute('src');
+    image.removeAttribute('alt');
+  }
+
+  caseLightboxLastFocused?.focus?.({ preventScroll: true });
+  caseLightboxLastFocused = null;
+};
+
+const openCaseLightbox = (trigger) => {
+  const casesBlock = trigger.closest('.cases');
+  const lightbox = casesBlock?.querySelector('[data-case-lightbox]');
+  const image = lightbox?.querySelector('[data-case-lightbox-image]');
+  const src = trigger.dataset.lightboxSrc;
+  const thumb = trigger.querySelector('.case-gallery__image');
+
+  if (!lightbox || !image || !src) return;
+
+  caseLightboxLastFocused = trigger;
+  image.src = src;
+  image.alt = thumb?.alt || 'Изображение кейса';
+  lightbox.classList.add('is-open');
+  lightbox.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('is-case-lightbox-open');
+  lightbox.querySelector('[data-case-lightbox-close]')?.focus({ preventScroll: true });
+};
+
+caseLightboxes.forEach((lightbox) => {
+  lightbox.addEventListener('click', (event) => {
+    if (event.target.closest('[data-case-lightbox-close]')) {
+      closeCaseLightbox(lightbox);
+    }
+  });
+});
+
+document.querySelectorAll('[data-case-lightbox-open]').forEach((trigger) => {
+  trigger.addEventListener('click', () => openCaseLightbox(trigger));
 });
 
 const workflowSliders = document.querySelectorAll('[data-workflow-slider]');
