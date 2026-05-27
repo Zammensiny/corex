@@ -8,5 +8,9 @@
   {% include "sections/about-audience.njk" %}
   {% include "sections/about-losses.njk" %}
   {% include "sections/ai-rounded.njk" %}
-  {% include "partials/footer.njk" %}
+  <div class="delivery-flow delivery-flow--ai" data-cms-block="ai-delivery-flow">
+    {% include "sections/support.njk" %}
+    {% include "sections/contact.njk" %}
+    {% include "partials/footer.njk" %}
+  </div>
 {% endblock %}
