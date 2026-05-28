@@ -247,6 +247,50 @@ document.querySelectorAll('[data-case-lightbox-open]').forEach((trigger) => {
   trigger.addEventListener('click', () => openCaseLightbox(trigger));
 });
 
+
+const attachSwipeControls = (viewport, goPrev, goNext) => {
+  if (!viewport || typeof goPrev !== 'function' || typeof goNext !== 'function') return;
+
+  let startX = 0;
+  let startY = 0;
+  let deltaX = 0;
+  let isHorizontal = false;
+
+  viewport.addEventListener('touchstart', (event) => {
+    if (!event.touches.length) return;
+    startX = event.touches[0].clientX;
+    startY = event.touches[0].clientY;
+    deltaX = 0;
+    isHorizontal = false;
+  }, { passive: true });
+
+  viewport.addEventListener('touchmove', (event) => {
+    if (!event.touches.length) return;
+
+    const currentX = event.touches[0].clientX;
+    const currentY = event.touches[0].clientY;
+    deltaX = currentX - startX;
+    const deltaY = currentY - startY;
+
+    if (!isHorizontal && Math.abs(deltaX) > 10 && Math.abs(deltaX) > Math.abs(deltaY) * 1.15) {
+      isHorizontal = true;
+    }
+
+    if (isHorizontal) {
+      event.preventDefault();
+    }
+  }, { passive: false });
+
+  viewport.addEventListener('touchend', () => {
+    if (!isHorizontal || Math.abs(deltaX) < 46) return;
+    if (deltaX < 0) {
+      goNext();
+    } else {
+      goPrev();
+    }
+  });
+};
+
 const workflowSliders = document.querySelectorAll('[data-workflow-slider]');
 
 workflowSliders.forEach((slider) => {
@@ -283,6 +327,7 @@ workflowSliders.forEach((slider) => {
 
   prevButton?.addEventListener('click', () => setSlide(activeIndex - 1));
   nextButton?.addEventListener('click', () => setSlide(activeIndex + 1));
+  attachSwipeControls(viewport, () => setSlide(activeIndex - 1), () => setSlide(activeIndex + 1));
 
   slides.forEach((slide, index) => {
     slide.addEventListener('click', () => {
@@ -343,6 +388,7 @@ supportSliders.forEach((slider) => {
 
   prevButton?.addEventListener('click', () => setSlide(activeIndex - 1));
   nextButton?.addEventListener('click', () => setSlide(activeIndex + 1));
+  attachSwipeControls(viewport, () => setSlide(activeIndex - 1), () => setSlide(activeIndex + 1));
 
   slides.forEach((slide, index) => {
     slide.addEventListener('click', () => {
@@ -516,3 +562,19 @@ document.querySelectorAll('[data-ajax-form]').forEach((form) => {
     }
   });
 });
+
+
+const scrollTopButton = document.querySelector('[data-scroll-top]');
+
+if (scrollTopButton) {
+  const toggleScrollTopButton = () => {
+    scrollTopButton.classList.toggle('is-visible', window.scrollY > 420);
+  };
+
+  scrollTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  window.addEventListener('scroll', toggleScrollTopButton, { passive: true });
+  toggleScrollTopButton();
+}

@@ -328,3 +328,10 @@
     justify-content: flex-start;
   }
 }
+
+@media (max-width: 720px) {
+  .about-team__note {
+    text-align: center;
+    justify-items: center;
+  }
+}

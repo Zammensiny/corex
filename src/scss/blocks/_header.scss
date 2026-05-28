@@ -257,3 +257,15 @@
     display: none;
   }
 }
+
+.phone-button {
+  transition: color 0.18s ease, background-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.phone-button:hover,
+.phone-button:focus-visible {
+  color: #1f2528;
+  background: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 16px 34px rgba(255, 255, 255, 0.16);
+}

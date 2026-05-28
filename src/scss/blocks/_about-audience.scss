@@ -208,3 +208,54 @@
     min-height: 360px;
   }
 }
+
+@media (max-width: 640px) {
+  .about-audience__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: none;
+    gap: 10px;
+  }
+
+  .audience-card {
+    min-height: clamp(190px, 58vw, 260px);
+    border-radius: 16px;
+  }
+
+  .audience-card h3 {
+    padding: 14px 13px 0;
+    font-size: 12px;
+  }
+
+  .audience-card__badge--big {
+    width: 42px;
+    height: 42px;
+  }
+
+  .audience-card__badge--small {
+    width: 28px;
+    height: 28px;
+  }
+
+  .audience-card--b2b .audience-card__badge--big,
+  .audience-card--franchise .audience-card__badge--big,
+  .audience-card--call .audience-card__badge--big {
+    left: 14px;
+    top: 52px;
+  }
+
+  .audience-card--franchise .audience-card__badge--small {
+    right: 28px;
+    top: 96px;
+  }
+}
+
+@media (max-width: 390px) {
+  .about-audience__cards {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+  }
+
+  .audience-card {
+    min-height: 320px;
+  }
+}

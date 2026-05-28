@@ -4,9 +4,11 @@
   padding: 86px 0 98px;
   color: var(--color-white);
   background:
-    radial-gradient(circle at 48% 0%, rgba(255, 255, 255, 0.12), transparent 28%),
-    radial-gradient(circle at 42% 88%, rgba(102, 126, 136, 0.22), transparent 24%),
-    linear-gradient(116deg, #3c4a51 0%, #20262a 47%, #393b41 100%);
+    linear-gradient(116deg, rgba(20, 28, 32, 0.56) 0%, rgba(15, 19, 22, 0.62) 48%, rgba(35, 36, 38, 0.48) 100%),
+    url("../assets/img/hero-texture.png") center / cover no-repeat,
+    radial-gradient(circle at 48% 0%, rgba(255, 255, 255, 0.10), transparent 28%),
+    radial-gradient(circle at 42% 88%, rgba(102, 126, 136, 0.18), transparent 24%),
+    linear-gradient(116deg, #2c3a41 0%, #171d20 47%, #292b30 100%);
 }
 
 .solution__container {

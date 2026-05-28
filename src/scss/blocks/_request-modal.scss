@@ -279,3 +279,14 @@
     font-size: 14px;
   }
 }
+
+@media (max-width: 720px) {
+  .request-modal__panel {
+    min-height: calc(100svh - 24px);
+    align-content: start;
+  }
+
+  .request-form textarea {
+    min-height: 132px;
+  }
+}

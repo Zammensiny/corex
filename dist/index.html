@@ -1273,20 +1273,55 @@
 </section>
 <footer class="site-footer" data-cms-block="footer">
   <div class="container site-footer__container">
-    <div class="site-footer__top">
-      <a class="site-footer__logo" href="index.html" aria-label="На главную" data-cms-field="logo">
-        <img src="assets/logo.svg" width="219" height="60" alt="Корекс системы">
-      </a>
+    <div class="site-footer__grid">
+      <div class="site-footer__brand">
+        <a class="site-footer__logo" href="index.html" aria-label="На главную" data-cms-field="logo">
+          <img src="assets/logo.svg" width="219" height="60" alt="Корекс системы">
+        </a>
 
-      <a class="site-footer__phone" href="tel:+74951203802" data-cms-field="phone">
-        + 7 495 120 38 02
-      </a>
+        <nav class="site-footer__nav" aria-label="Навигация в подвале" data-cms-field="menu">
+          <a href="about.html">О компании</a>
+          <a href="ai.html">ИИ-инструменты</a>
+        </nav>
+
+        <div class="site-footer__columns" data-cms-field="links">
+          <ul>
+            <li><a href="about.html">Команда</a></li>
+            <li><a href="index.html#services">Услуги</a></li>
+            <li><a href="index.html#workflow">Форматы работы</a></li>
+          </ul>
+          <ul>
+            <li><a href="index.html#support">Отзывы</a></li>
+            <li><a href="ai.html">Для кого</a></li>
+            <li><a href="index.html#cases">С кем работали</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__contact" data-cms-field="contacts">
+
+        <div class="site-footer__hours" data-cms-field="hours">Пн–Пт с 9:00 до 20:00</div>
+
+        <div class="site-footer__contact-row">
+          <a class="site-footer__email" href="mailto:pochta@gmail.com">Почта@gmail.com</a>
+          <button class="site-footer__copy" type="button" data-copy-email="pochta@gmail.com" aria-label="Скопировать почту">
+            <span aria-hidden="true"></span>
+          </button>
+          <a class="site-footer__phone" href="tel:+74951203802">+7 495 120 38 02</a>
+        </div>
+
+        <div class="site-footer__downloads">
+          <a href="#">Скачать презентацию</a>
+          <a href="#">Электронная визитка</a>
+        </div>
+
+        <ul class="site-footer__socials" aria-label="Социальные сети">
+          <li><a href="#" aria-label="Telegram"><img src="assets/icons/social-telegram.svg" width="25" height="25" alt=""></a></li>
+          <li><a href="#" aria-label="WhatsApp"><img src="assets/icons/social-whatsapp.svg" width="22" height="22" alt=""></a></li>
+          <li><a href="#" aria-label="VK"><img src="assets/icons/social-vk.svg" width="22" height="22" alt=""></a></li>
+        </ul>
+      </div>
     </div>
-
-    <nav class="site-footer__nav" aria-label="Навигация в подвале" data-cms-field="menu">
-      <a href="about.html">О нас</a>
-      <a href="ai.html">ИИ-инструменты</a>
-    </nav>
 
     <div class="site-footer__bottom" data-cms-field="legal">
       <a href="#">Политика обработки персональных данных</a>
@@ -1328,6 +1363,12 @@
 
             <a class="menu-modal__phone" href="tel:+74951203802">+7 495 120 38 02</a>
           </div>
+
+          <ul class="menu-modal__socials menu-modal__socials--mobile" aria-label="Социальные сети">
+            <li><a href="#" aria-label="Telegram"><img src="assets/icons/social-telegram.svg" width="25" height="25" alt=""></a></li>
+            <li><a href="#" aria-label="WhatsApp"><img src="assets/icons/social-whatsapp.svg" width="22" height="22" alt=""></a></li>
+            <li><a href="#" aria-label="VK"><img src="assets/icons/social-vk.svg" width="22" height="22" alt=""></a></li>
+          </ul>
         </div>
 
         <div class="menu-modal__visual" aria-hidden="true">
@@ -1398,6 +1439,10 @@
     </form>
   </div>
 </div>
+
+    <button class="scroll-top" type="button" aria-label="Наверх" data-scroll-top>
+      <span aria-hidden="true">↑</span>
+    </button>
   </div>
 
   <script src="js/main.js" defer></script>

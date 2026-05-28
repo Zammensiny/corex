@@ -470,3 +470,39 @@ body.is-case-lightbox-open {
     border-radius: 18px;
   }
 }
+
+@media (max-width: 720px) {
+  .cases-tabs {
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cases-tabs__button,
+  .cases-tabs__button.is-active {
+    box-shadow: none;
+  }
+
+  .case-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .case-gallery__item,
+  .case-gallery__image {
+    min-height: 136px;
+  }
+
+  .case-gallery__zoom {
+    width: 34px;
+    height: 34px;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .case-gallery {
+    grid-template-columns: 1fr;
+  }
+}

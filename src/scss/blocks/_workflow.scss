@@ -16,10 +16,12 @@
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(circle at 18% 12%, rgba(91, 119, 132, 0.62), transparent 34%),
-    radial-gradient(circle at 84% 42%, rgba(255, 255, 255, 0.16), transparent 34%),
-    radial-gradient(circle at 42% 80%, rgba(76, 106, 121, 0.46), transparent 32%),
-    linear-gradient(127deg, #40545c 0%, #2a3439 44%, #778188 100%);
+    linear-gradient(127deg, rgba(20, 28, 32, 0.62) 0%, rgba(17, 22, 25, 0.68) 46%, rgba(44, 48, 51, 0.54) 100%),
+    url("../assets/img/hero-texture.png") center top / cover no-repeat,
+    radial-gradient(circle at 18% 12%, rgba(91, 119, 132, 0.38), transparent 34%),
+    radial-gradient(circle at 84% 42%, rgba(255, 255, 255, 0.10), transparent 34%),
+    radial-gradient(circle at 42% 80%, rgba(76, 106, 121, 0.30), transparent 32%),
+    linear-gradient(127deg, #2e4149 0%, #192126 44%, #4a5055 100%);
 }
 
 .delivery-flow::before {
