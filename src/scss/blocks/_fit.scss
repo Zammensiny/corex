@@ -160,6 +160,7 @@
   width: 30px;
   height: 30px;
   object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .fit-point--contractor {

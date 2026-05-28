@@ -35,7 +35,7 @@
 
 .origin-card {
   position: relative;
-  min-height: 310px;
+  min-height: 405px;
   overflow: hidden;
   border-radius: 19px;
   background: #ece9de;
@@ -89,8 +89,8 @@
 }
 
 .origin-card__badge--big {
-  width: 56px;
-  height: 56px;
+  width: 73px;
+  height: 73px;
 }
 
 .origin-card__badge--small {
@@ -99,13 +99,13 @@
 }
 
 .origin-card--folder .origin-card__badge--big {
-  left: 22px;
-  top: 86px;
+  left: 33px;
+  top: 104px;
 }
 
 .origin-card--folder .origin-card__badge--small {
   right: 36px;
-  top: 122px;
+  top: 161px;
 }
 
 .origin-card--money .origin-card__badge--big {

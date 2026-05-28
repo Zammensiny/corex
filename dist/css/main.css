@@ -2741,6 +2741,7 @@ html {
   height: 30px;
   -o-object-fit: contain;
      object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .fit-point--contractor {
@@ -3480,7 +3481,6 @@ body.is-case-lightbox-open {
 .workflow-slider__viewport {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  overflow: hidden;
 }
 
 .workflow-slider__track {
@@ -3804,7 +3804,6 @@ body.is-case-lightbox-open {
 .support-slider__viewport {
   width: 100vw;
   margin-left: calc(50% - 50vw);
-  overflow: hidden;
 }
 
 .support-slider__track {
@@ -3830,7 +3829,7 @@ body.is-case-lightbox-open {
 }
 
 .support-card {
-  min-height: 260px;
+  min-height: 325px;
   padding: 28px 26px 30px;
   border-radius: 14px;
   color: rgba(255, 255, 255, 0.94);
@@ -3859,7 +3858,6 @@ body.is-case-lightbox-open {
 }
 
 .support-card h3 {
-  min-height: 44px;
   margin: 0 0 18px;
   color: inherit;
   font-family: var(--font-heading);
@@ -5581,7 +5579,7 @@ body.is-case-lightbox-open {
 
 .origin-card {
   position: relative;
-  min-height: 310px;
+  min-height: 405px;
   overflow: hidden;
   border-radius: 19px;
   background: #ece9de;
@@ -5637,8 +5635,8 @@ body.is-case-lightbox-open {
 }
 
 .origin-card__badge--big {
-  width: 56px;
-  height: 56px;
+  width: 73px;
+  height: 73px;
 }
 
 .origin-card__badge--small {
@@ -5647,13 +5645,13 @@ body.is-case-lightbox-open {
 }
 
 .origin-card--folder .origin-card__badge--big {
-  left: 22px;
-  top: 86px;
+  left: 33px;
+  top: 104px;
 }
 
 .origin-card--folder .origin-card__badge--small {
   right: 36px;
-  top: 122px;
+  top: 161px;
 }
 
 .origin-card--money .origin-card__badge--big {
