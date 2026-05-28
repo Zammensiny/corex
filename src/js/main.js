@@ -322,8 +322,10 @@ supportSliders.forEach((slider) => {
     const activeSlide = slides[activeIndex];
     const trackStyle = window.getComputedStyle(track);
     const trackPaddingLeft = parseFloat(trackStyle.paddingLeft) || 0;
+    const endOffset = parseFloat(trackStyle.getPropertyValue('--slider-end-offset')) || 0;
     const maxOffset = Math.max(0, track.scrollWidth - viewport.clientWidth);
-    const offset = Math.min(Math.max(0, activeSlide.offsetLeft - trackPaddingLeft), maxOffset);
+    const safeMaxOffset = maxOffset + (activeIndex === slides.length - 1 ? endOffset : 0);
+    const offset = Math.min(Math.max(0, activeSlide.offsetLeft - trackPaddingLeft), safeMaxOffset);
 
     track.style.transform = `translate3d(${-offset}px, 0, 0)`;
 

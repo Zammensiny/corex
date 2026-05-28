@@ -46,13 +46,14 @@
 .support-slider {
   --support-card-width: min(300px, calc(100vw - 48px));
   --support-gap: clamp(20px, 2vw, 26px);
+  --slider-end-offset: clamp(36px, 4vw, 72px);
   position: relative;
   z-index: 2;
   margin-top: 50px;
 }
 
 .support-slider__viewport {
-  width: 100vw;
+  width: 95vw;
   margin-left: calc(50% - 50vw);
 }
 
