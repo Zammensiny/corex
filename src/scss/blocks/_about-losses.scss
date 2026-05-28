@@ -32,18 +32,18 @@
 }
 
 .about-losses__lead {
-  max-width: 390px;
   margin: 9px 0 0;
   color: rgba(255, 255, 255, 0.82);
   font-size: 15px;
   line-height: 1.36;
   letter-spacing: 0.02em;
+  text-align: right;
 }
 
 .losses-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 2.4fr;
-  grid-auto-rows: 160px;
+  grid-auto-rows: 185px;
   gap: 16px;
   width: 100%;
   margin: 43px 0 0;
