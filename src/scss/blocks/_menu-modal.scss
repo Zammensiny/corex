@@ -283,8 +283,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 88px;
-  height: 88px;
+  width: min(46%, 178px);
+  height: auto;
   object-fit: contain;
   opacity: 0;
   transform: translate(-50%, -50%) scale(0.7) rotate(-25deg);
@@ -437,18 +437,8 @@
 }
 
 @media (max-width: 640px) {
-  .menu-modal__top .site-logo__mark {
-    width: 42px;
-    height: 42px;
-  }
-
-  .menu-modal__top .site-logo__divider {
-    height: 32px;
-    margin-inline: 12px;
-  }
-
-  .menu-modal__top .site-logo__text {
-    font-size: 16px;
+  .menu-modal__top .site-logo__image {
+    width: 154px;
   }
 
   .menu-modal__close {

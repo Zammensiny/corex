@@ -26,35 +26,14 @@
 .site-footer__logo {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
   color: #ffffff;
 }
 
 .site-footer__logo img {
   display: block;
-  width: 48px;
-  height: 48px;
+  width: clamp(168px, 14.2vw, 198px);
+  height: auto;
   object-fit: contain;
-}
-
-.site-footer__logo-text {
-  position: relative;
-  padding-left: 14px;
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 0.95;
-  letter-spacing: 0.01em;
-}
-
-.site-footer__logo-text::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 2px;
-  width: 1px;
-  height: 34px;
-  background: rgba(255, 255, 255, 0.42);
 }
 
 .site-footer__phone {
@@ -193,6 +172,10 @@
   .site-footer__top {
     display: grid;
     grid-template-columns: 1fr;
+  }
+
+  .site-footer__logo img {
+    width: 156px;
   }
 
   .site-footer__phone {

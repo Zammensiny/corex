@@ -92,8 +92,8 @@
 .request-modal__visual {
   position: relative;
   display: grid;
-  width: 72px;
-  height: 72px;
+  width: 190px;
+  height: 68px;
   place-items: center;
   margin-bottom: 24px;
   border-radius: 18px;
@@ -109,8 +109,8 @@
 }
 
 .request-modal__visual img {
-  width: 42px;
-  height: 42px;
+  width: 154px;
+  height: auto;
   object-fit: contain;
   filter: brightness(0) invert(1);
 }

@@ -9,7 +9,7 @@
 .site-header__inner {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(205px, 1fr) auto minmax(250px, 1fr);
+  grid-template-columns: minmax(220px, 1fr) auto minmax(250px, 1fr);
   align-items: center;
   gap: 24px;
 }
@@ -21,27 +21,12 @@
   color: var(--color-white);
 }
 
-.site-logo__mark {
-  width: 48px;
-  height: 48px;
+.site-logo__image {
+  display: block;
+  width: clamp(168px, 14.2vw, 190px);
+  height: auto;
   flex: 0 0 auto;
   object-fit: contain;
-}
-
-.site-logo__divider {
-  display: block;
-  width: 1px;
-  height: 39px;
-  margin: 0 15px;
-  background: rgba(255, 255, 255, 0.36);
-}
-
-.site-logo__text {
-  align-self: center;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 0.94;
-  letter-spacing: -0.035em;
 }
 
 .main-nav {
@@ -264,18 +249,8 @@
     padding-top: 18px;
   }
 
-  .site-logo__mark {
-    width: 42px;
-    height: 42px;
-  }
-
-  .site-logo__divider {
-    height: 33px;
-    margin-inline: 12px;
-  }
-
-  .site-logo__text {
-    font-size: 17px;
+  .site-logo__image {
+    width: 154px;
   }
 
   .main-nav {
