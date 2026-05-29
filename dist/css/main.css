@@ -330,7 +330,7 @@ html {
 
 .site-logo__image {
   display: block;
-  width: clamp(168px, 14.2vw, 190px);
+  width: 135px;
   height: auto;
   flex: 0 0 auto;
   -o-object-fit: contain;
@@ -559,7 +559,7 @@ html {
     padding-top: 18px;
   }
   .site-logo__image {
-    width: 154px;
+    width: 135px;
   }
   .main-nav {
     display: none;
@@ -1040,7 +1040,7 @@ html {
 }
 @media (max-width: 640px) {
   .menu-modal__top .site-logo__image {
-    width: 154px;
+    width: 135px;
   }
   .menu-modal__close {
     width: 44px;
@@ -1235,7 +1235,7 @@ html {
 }
 
 .request-modal__visual img {
-  width: 154px;
+  width: 135px;
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
@@ -4639,7 +4639,7 @@ body.is-case-lightbox-open {
 
 .site-footer__logo img {
   display: block;
-  width: clamp(168px, 14.2vw, 198px);
+  width: 135px;
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
